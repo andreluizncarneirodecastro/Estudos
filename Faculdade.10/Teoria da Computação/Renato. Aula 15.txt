@@ -1,0 +1,76 @@
+Aula 15. Renatão
+Le palavras por palavras do codigo fonte. #Main.CPP#
+E passa pro primeiro módulo: #Analisador Léxico#
+cuja a principal função é a partir de diferentes automatos, pega essas palavras
+e classificam elas dando uma especificação funcional.
+
+TOKEN é gerado pelo lexer, do qual tem (LEXEMA[string que foi lida], TIPO[dado, identificador, op aritimético, constante inteira, float...])
+TOKEN é passado para o próximo módulo que é um analisador sintático, chamado #PARSER#.
+que pega o conjunto de tokens que o lexer gera e vai verificando se a ordem dos tokens esta de acordo com a gramática pré definida da linguagem.
+
+O Parser por si só não consegue satisfazer todas as restrições possíveis(restrições arquiteturais, restriçoes que não são passíveis da gramática,
+gramática essa denominada livre de contexto, existem restrições que fica impossível pra gramática identificar como por ex: Paridade, verificação de tipos,
+verificação de variávies declaradas e não declaradas, restrições do tipo: posição de vetores, numero de parametros da função, etc)
+
+Então esses tokens desses parsers é passado para o #analisador semantico#, que verifica as restrições e montam a #tabela de simbolo#.
+
+Esses 3 primeiros estágios são muito comuns em qualquer modulo/programa que trate qualquer tipo de linguagem, linguagem de prog., ling. natural... etc...
+
+O analisador semantico passa para um próximo modulo que vai dividir as características dos dois softwares que estudamos nessa disciplina.
+*Compiladores* após passar por todas essas etapas, temos o gerador de codigo: *code gen* (é uma unidade de tradução)
+A ideia dele é pegarmos uma expressão e transformamos ela em um assembly.       int x = y + 4 * c + d  --> movL % ( esp + 4 ) , %   
+												       --> addL % (esp + 5) , % ae	        
+Então o gerador de código pega o conjunto que estamos identificando e com o auxilio da tabela de simbolos, vai começar construir a tradução do codigo para
+a linguagem assembly.
+
+por outro lado temos o *interpretador* que vai utilizar uma máquina virtual, que consegue ir executando o código em tempo de execução. 
+Cada variavel que nós temos, dentro do codigo que estamos lendo, vão ser objetos dentro da memória do computador e da máquina virtual.
+A ideia dele é que temos a mesma sentença e temos a tabela de simbolos..
+Onde temos os Lexemas, Tipo, Valor.
+Então agora vamos ter possibilidades de pegar o Lexema X, Lexema C e o D.
+um do tipo Int, float.. chat ...
+
+---------Diferença de compilador e Interpretador---------
+O Compilador após a analise semantica ele gera um codigo executavel, cria o assembly, dps faz a montagem do codigo...
+Então o compilador tem a função de criar um código executavle, que cria um assembly, e funções que a máquina entende.
+
+O interpretador vai executando a medida em que ele vai lendo, por isso podemos executar um programa em python e descobrir que ta errado, 
+e só descobrir q ele ta errado quando executar uma instrução correspondente.. Porque o interpretador só vai entender que a coisa ta incorreta,
+quando ela chegar pra executar em determinada instrução.
+x = int(input(7))
+.
+. [15 mil linhas]
+.
+x = "k" + 4        XXXXXX n podemos fazer     - só aqui que vai ver se esta incorreto ou correto
+[detecta o erro em tempo de execução]
+
+---------Como criar uma Máquina virtual?---------
+Pra responder essa pergunta, vamos ter que desmembrar. Diferentes modulos da máquina virtual.
+Cada sub modulo tem características especificas!
+* Cálculo de expressões       --Aula 15--
+* Execução de comandos em blocos   --> Condicionais --> Laços de repetição
+* Análise de expressões lógicas
+
+Para calcular expressões, criaremos uma pilha de tokens. 
+Recordando a gramática de expressões aritméticas
+
+Expressão -> Termo + Expressão | Termo - Expressão | Termo
+Termo -> Fator * Termo | Fator / Termo | Fator      ~n ambigua~
+Fator -> id | cte | (expressão)
+
+Toda vez que atingirmos uma folha(não terminal fator) , vamos empilhar o TOKEN
+ toda vez que existir operadores aritméticos, vamos desempilhar 3 Tokens, calcular e reempilhar o resultado.
+
+Para ficar claro, considere como exemplo a expressão a seguir:
+x = y + 4 * c + d;
+Tabela de símbolos;
+lexema      tipo      valor
+"x"	    int	       "0"	
+"y"	    int	       "3"
+"c"	    int	       "2"
+"d"	    int	       "-1"
+
+ 
+--estrutura de arvore e estrutura de pilha, GARANTEM a ordem certa das OPERAÇÕES ARITMÉTICAS.---
+
+DEPOIS DESSA AULA É BASICAMENTE 3 EXERCÍCIOS DA ARVORE PRA VER COMO O COMPILADOR FUNCIONA - DPS IMPLEMENTAÇÃO

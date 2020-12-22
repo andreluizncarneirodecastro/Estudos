@@ -1,0 +1,32 @@
+Main.cpp passa pelo compilador passando por estágios:
+
+1° Estágio - Analise Léxica[LEXER]: O código ao ser lido cada uma das palavras e caracteres,
+que compõe o código tem uma classificação por uma estrutura de dados que é chamada <Token>
+
+int a, b, c; 
+TOKEN		SIGNIFICA
+"int"		tipo de dado
+"main" 		identificador
+
+
+2° Estágio - Analise sintatica[PARSER]: é um sub modulo do compilador, 
+que verifica SE um dado codigo esta sintaticamente correto, 
+	se obedece a regra linguagem. 
+
+3° Estágio - Analise semântica[TABELA DE SIMBOLOS]: É uma analise feita no código fonte,
+código de entrada do compilador, que visa verificar erros que não são previstos dentro da gramática.
+
+int a,b
+b = 2.5; 			
+c = a + b;
+return 0;
+
+existem dois erros semânticos aqui, double sendo colocado no int
+			e C não foi declarado. 
+
+4° Estágio - Temos o G.C :que pega uma linguagem de alto nível e transforma em assembly.
+G.C passa pelo otimizador de código e gera um código executavel.
+
+E um interpretador tem a V.M. do interpretador que executa direto.
+
+-> (a/b)* todas as combinações possíveis de palavras 
