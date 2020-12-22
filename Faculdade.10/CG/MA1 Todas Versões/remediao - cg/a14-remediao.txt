@@ -1,0 +1,60 @@
+
+Formas de algoritmo de profundidade...
+
+ZBUFFER:
+S3 VAI PINTAR?
+ELE PERGUNTA, TEM ALGUEM NA FRENTE?
+A TEM O S2, opa entao nao vou pintar minha cor, cancela...
+fazendo isso pixel a pixel no tamanho da tela.
+Ele é um formato mais preciso que o do pintor. Esta isolando cada pixel,
+e cada pixel terá sua cordenada de profundidade.
+Tendo uma certa perfeição no aspecto de profundidade.
+ENT N VOU PINTAR, CANCELA
+
+--REALISMO--
+Primordial: Iluminação, a luz influencia muito na forma que vemos as coisas.
+As sombras também que através da iluminação a calculamos.
+Brilho, mesma coisa. *tudo sendo um subtopico de iluminacao*, n precisamos de brilho pra ter iluminação
+mas precisamos de iluminação pra ter brilho.
+Reflexão, refração, textura, transparencia.
+
+
+QUANDO IMPLEMENTAMOS ALGUNS OBJ EM 3D, ALGUNS PROBLEMAS PODEM OCORRER.
+1. Esse poligono da face do obj, tem profundidades diferentes.
+Um vertice estando mais atrás do que o outro.
+Então o vertice médio está no centro do poligono.
+Quando temos um outro obj, no caso o pilar, ele tem o vértice bem perto
+então o Zmédio está na parte inferior.
+Quando temos dois poligonos um sobrepondo o outro,
+a análise q fazemos pra ver ql está mais perto ou nao é pelo Z.
+
+Em um determinado momento, o poligono ta na frente e outro ta atrás.
+Esse pedaço ta atrás e oturo na frente, causando um BUG na nossa representação.
+Um outro bug que temos na imagem é o teto da imagem, que parece estar afundado
+porque foi colocado uma sombra e deu a sensação do teto estar afundado.
+ACONTECEU a cagada do teto, porque a face que estaria lá atrás
+ela está sobrepondo o teto de cima, então quando aconteceu isso. Foi uma análise incorreta
+do valor do ZMÉDIO. Ou ZDeCada Ponto
+Então ficou mt zoado esse templo grego.
+
+OUTRO PROBLEMA, q podemos ter com a profundidade
+SÃO as ambiguidades.
+Ao representar os vértices e arestas de um cubo
+alguma face está na frente de outra, mas qual ?
+Será que o cuba é dessa forma? *mostgrou imagem zoada*
+ISSO depende de onde está o observador.
+
+ALÉM DISSO, quando sabemos a profundidade de cada vértice e a representação correta,
+chegamos em uma representação desse cubo.
+Só que um objeto 3D do mundo matemático, tem mais faces do que nós podemos ver.
+Esse face por exemplo tem 8 faces. Do qual conseguimos ver 3.
+Tendo 5 faces... Conseguimos ver 3
+não precisamos gastar tempo pintando as outras q não vamos ver.
+Então existe uma extratégia que descartamos as faces que naõ da pra ver.
+ENTAO pra todo poligono plano que forma uma face,
+calculamos uma NORMAL que eé um vetor perpendicular a face/plano
+e então determinamos aonde está a pessoa onde está observando.
+
+A FACE SÓ ESTA SENDO ESCONDIDA, CASO UMA PESSOA ESTEJA OLHANDO.
+
+MOSTROU O LANCE DOS OBSERVADORES.

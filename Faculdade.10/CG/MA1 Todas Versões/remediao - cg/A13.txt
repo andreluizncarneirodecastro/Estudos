@@ -1,0 +1,133 @@
+AULA 13
+
+Esfera/pessoa/rosto quanto mais poligonos, temos que ter aproximações e mais perfeito será essa representação.
+
+Armazenando um objeto 3d, carregando-o no jogo, sw de modelagem e tudo mais, é interessante armazenarmos a coordenada dos vertices e orientação
+de cada poligono. E algumas informações visuais, cores... sombreamento, textura... 
+
+Coordenadas ja trabalhamos, fizemos o PARSER.
+
+OBJ 3D: COLEÇÃO DE POLIGONOS Q É UMA COLEÇÃO DE VERTICES, ESSA TABELA DE ARESTAS AO MENOS O FORMATO OBJ N USA,
+EXISTEM OUTROS FORMATOS QUE PODEMOS TER UMA TABELA DE ARESTAS,
+MAS O OBJ TRABALHA COMO UMA TABELA DE ARESTAS E DE SUPERFICIES,
+TENDO TABELA DAS NORMAIS E DE TEXTURAS TAMBÉM.
+
+
+Pra ver se não tem uma aresta se não ta fechando, se tem um poligono q falta um vertice... tem algumas verificações.
+E A REVISÃO IMPORTANTE É: COMO SABER A ORIENTAÇÃO DE UM POLIGONO?
+ONDE ESTA SENDO VISTO O POLIGONO? - DEVEMOS PENSAR DA SEGUINTE FORMA:
+
+
+-----------------------------------------------------------------------------
+Equação do plano
+através dela e da regra da mão direita,
+se pegarmos a ordem que os vertices estão distribuidos...
+o vetor que é meu dedão representa a normal do plano.
+Quando calculado a equação do plano e obtemos os valores de a,b,c e d..
+precisamos de ao menos 3 pontos colineares, 3 pontos que formam um triangulo,
+e qual que é o vetor normal ?
+É um vetor que é formado pelos valores de a b e c.
+Ax + By + Cz + D (vetor normal é composto de A B E C )
+~ele vai falar o porque é importante.
+
+Ele apontou coisas que dependem de onde esta o observador
+O vetor normal é um vetor perpendicular ao ponto, com angulo de 90°
+
+Estando em um sentindo perpendicular ao olho do observador, n conseguimos ver.
+
+Estando em um pipeline 3d, pra remover as faces...
+fazemos todos os poligonos e calculamos a normal pra todos, blz ...
+Uma vez com a normal calculada, ja teremos a camera e o observador,
+vemos qual é o angulo da normal do poligono e o observador
+se o angulo n bater, estiver no msm sentido, arranca fora o poligono
+pq ele n vai ser visualizado.. 
+Nisso cai o calculo de desempenho que teremos no trabalho.
+Pois ai esta a diferença com 1milhão depoligonos, pq n veremos... ja q vai estar atrás
+
+Se for 180° graus é visivel
+0 ou 90 graus n da pra ver...
+90 e 180 consideramos q esta visivel, q vamos mostra-la porém
+vai ter caso q n vai estar visivel, nisso outros algoritmos vão esconder ela..
+
+----------------------------------------------------------------------------
+
+para sabermos se um obj vai ser visivel ou naõ, sempre vai depender do observador.
+Do qual dependerá da rotação dele(pra superficie escondida, calculo do vetor normal)
+Para analise de profundidade (dependerá da distancia que ele está dos obj, a posição do obs)
+
+Algoritmo Do Pintor que trabalha em um mundo matemático, analisando a posição dos obj e verificando qm está na frente ou atrás.
+
+Espaço de imagem:
+Só calculamos as distancias daqueles que passam pelos pixels que vão ser mostrados, uma amostragem que passa a adotar um conceito computacional.
+Exemplo é o z buffeer.
+
+------------------------------------------------
+a ideia do algoritmo do PINTOR é q ele vai desenhar o q esta na FRENTE do outro objeto dps
+Muda completamente o resultado pro observador, dependendo da ordem q colocarmos os obj
+
+
+PARA FAZER O ALG. DO PINTOR,
+CALCULAMOS O Z MÉDIO
+O VALOR DE PROFUNDIDADE...
+TENDO UM POLIGONO Q TENHA (X,Y,Z)....
+SOMAMOS TODOS OS Z'S E TEREMOS OS Z MÉDIOS
+
+DPS PRECISAMOS ORDENA-LOS EM RELAÇÃO A Z
+ (temos uma lista de poligonos e ordamos em relação a z medio de cada poligono)
+
+pintamos o z mais longe do observador, até o que esta mais perto da camera.
+assim os poligonos mais pertos vão se sobrepor aos que estao mais longe.
+(dando o efeito de profundidade)
+
+--antes de recortar, ordemos eles em relação a z-- 
+parei no 1:54
+------------------------------------------------
+
+Zbuffer utiliza duas matrizes
+1 - *cores* das imagens
+2 - outra matriz com o msm tamanho q vai ter a informação da *profundidade* do pixel, encontrada até o momento.
+
+Placa gráfica ja tem o buffer em hw que agiliza o calculo.
+O algoritmo do z buffer é a principal implementação.
+
+
+pra cada pixel da imagem, fazemos uma analise pra ver qual poligono bateu 1°
+Temos o eixo z, pra testar a visiblidade de cada pixel.
+o poligono q tiver uma coordenada z menor que todos os outros naquele pixel,
+ele que tornará visivel aquela cor.
+Pra mostrar um obj na tela é mostrar/atualizar um valor de cor.
+Um desenho no computador nada mias é q mudar a cor do pixel.
+
+-Poderemos escolher ou o pintor ou o z buffer-
+z buffer é implementado logo antes e dps da projeção
+pegamos o resultado da projeção e também o resultado da projeção z antes da projeção
+a parte final dele... é a na rasterização... no scaNlINE
+algo mais complexo de implementar...
+[EXPLICOU funcionalidades do z bffer 2:00:00] 
+
+trabalha isolando cada pixel da imagem final
+
+2:05:00 falou dos problemas do alg. do pintor e vantagens
+SENDO O MAIS UTILIZADO E IMPLEMENTADO EM HW pra APRIMORAR A VELOCIDADE.
+
+2:06:50 explica como funciona em si o z buffer, com matrizes... analise de poligonos.. etc
+TENDO COMO MAIOR PROBLEMA, DE COMO VAI ENCONTRAR O VALOR DO Z DO Y ATUAL. POIS FORA ISSO, O ALGORITMO É SIMPLES
+
+falou de fazer uma varredura com x,y
+se tem o valor de x e y, encontra o z dessa forma
+
+Algebra basica temos x+1 , o ponto executivo da direita,
+só pegar o X q tinha e somar 1
+Se isolar o x anterior o x+1 vai ser o z anterior - a/b
+ele tem um acumulador
+
+Numa linha vertical, segue o mesmo principio
+colocando o valor de y - 1 e isolar o anterior.. 
+
+------------------------------------------------
+REALISMO: Iluminação, sombra, brilho, reflexão, textura e transparencia.
+
+Não precisa ter brilho pra ter iluminação, mas precisa ter iluminação pra ter brilho.
+
+
+28:30 Iluminação. 

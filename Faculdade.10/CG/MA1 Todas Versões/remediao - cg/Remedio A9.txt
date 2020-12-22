@@ -1,0 +1,106 @@
+
+----------------------------------------------------------------------
+Aula 9 Remédio
+Explicou o Pipeline 3D.
+
+----------------------------------------------------------------------
+1.[Modelagem] Onde vai criar os vertices em 3 dimensões/transformações e um eixo a mais.
+Mostrou como muda a translação e rotação na aula 8.
+
+2,3.[transformação de visu/transformação de projeção] Nas 3 primeiras etapas são 3D agora da 3° pra 4° é 2D.
+Na transformação e visualização é trabalhoso, mas é mais que multiplicação de matriz.
+Basta seguir os passos na hora do projeto.
+
+A de visualização que é a mais importante no momento, pois no 2D tinhamos a janela de desenho,
+movimentando-a, a diferença do 3D é que além da janela de desenho se movimentar, podemos 
+rotaciona-la também. Podemos estar em qualquer posição do mundo matemático para observa-lo.
+~Verde~ seria nossa Janela de Desenho.
+Nossa ideia no projeto, é que em vez de considerarmos o mundo matemático com o eixo físico,
+e fazer os calculos na camera, passaremos a adotar a camera como centro do mundo e rotacionaremos
+todo o resto.
+É como se a camera fosse a nossa origem do universo/olho do observador é a origem do universo.
+
+3D teremos rotação nos 3 eixos, rotação x,y,z.
+Tendo feito as transformações de visualização, o nosso objeto vai estar no mesmo angulo.
+
+A partir dai projetamos algo 3d em pontos 2d.
+De um jeito ou de outro vamos perder informação.
+Usando projeção ortográfica ela representa muito bem a proporção. Só que a profundidade muito mal feita.
+Usando uma perspectiva a profundidade fica show, mas a proporção não fica muito.
+
+Converteu pro 2d? fazer recorte de poligonos/vertices.
+Vamos mostrar até o infinito ou para em algum lugar?
+(deu o exemplo do predio em um mundo de jogos)
+Faz uma profundidade para que nao tenha que fazer uma computação imensa, pois se tiver que renderizar
+todos os objetos até o infinito, iria abusar do processador.
+Isso seria uma escolha, essa escolha é apenas para o desempenho. Se não quiser fazer o recorte de profundidade
+vai funcionar, mas teria muito mais calculo para ser realizado.
+[TODO JOGO DE MUNDO ABERTO FAZ ISSO POIS N TEM COMO RENDERIZAR O JOGO INTEIRO A TODO MOMENTO]
+[Dica; usar um bit a mais no sutthersuderland]
+
+
+Transformação de visualização e Projeção
+(Mais normal é a 1pt. Fuga - que é como nós vemos o mundo - mas encontramos mt jogos com essa 
+representação ortográfica, jogo de plataforma vemos ela de forma ortográfica)
+
+----------------------------------------------------------------------
+
+1. Curvas existem em muitos lugares, varios lugares complexos e tudo mais.
+-Precisamos ver como representar a curva com conjunto de pontos
+-representa analítica
+-paramétricas
+
+Tendo um conjunto de PONTOS maior terá uma suavização na curva maior.
+
+na hora de criar uma curva, pegamos o ponto dela, e vemos o polinomio. Que através dele teremos uma equação.
+Polinomio = somatoria q representará a curva.
+(a representação analitica pode vir através disso)
+
+com vários u's representamos os pontos na tela. Cada curva ao faze-la vai ter uma função diferente,
+da qual vai depender mais de um parametro, que será u
+
+"separar a curva inteira em pedaços - UTILIZANDO LINES "
+União de curvas chamamos de continuidade.. e podemos ter descontinuidade..
+
+
+2. Curva bezier
+passa pela seguinte premissa, o primeiro e o ultimo vão encostar.
+Todos os outros influenciam na curva.
+
+Curva de bezier teremos uam interpretação melhor do sensor q estamos tendo...
+- Como aplica-las ?
+é como se ela ligasse do ponto inicial até o final e cada ponto vai puxando.
+
+Como ele sempre chega do inicial até o final, ja tem concluido q é ordem 0
+e o final e iniciam sendo os mesmos, os adjacentes tem uma ordem tangenciando..
+
+o exemplo dado anteriormente é uma curva de bezier.
+Ele leva em consideração todos os pontos de controle.
+(É bom utiliza-lo em projetos que perdem para detalhamento cientifico)
+
+
+3.Spline ( spline e bezie são curvas paramétricas - formas paramétricas de serem representadas )
+
+----------------------------------------------------------------------
+
+Curvas - superficie de revolução
+rotacionando a curva parecerá um vaso.
+Tendo um formato curvo que faz a revolução dele.
+
+Outra forma é o deslocamento, por meio de uma outra curva
+----------------------------------------------------------------------
+
+Nós reprsentamos os obj 3d através de poligonos planos 
+
+.Alguns vão ser perfeitos, assim como um cubo, tetaedro..
+já uma esfera fica mais serrilhada.
+
+NÃO PODE TER ARESTAS VOANDO, TEM QUE TER SUPERFICIES. CADA ARESTA TEM Q FAZER PARTE
+DE PELO MENOS 1 SUPERFICIE...
+
+
+TENDO A MATRIZ A B E C TEMOS A NORMAL
+SABENDO A NORMAL E A DIREÇÃO DO POLIGONO, PERCEBEMOS SE OUTRO POLIGONO ESTA ESCONDIDO OU N
+PEGAMOS UM PONTO DO OUTRO POLIGONO E USAMOS NA EQ. DO PONTO, SE FOR MAIOR Q 0 ELE TA FORA DA SUPERF.
+SE ELE FOR MENOS Q 0, ELE TA OCULTO.
+
