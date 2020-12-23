@@ -1,0 +1,13 @@
+C:\Users\andre\source\repos\Sete\Sete\obj\Debug\netcoreapp3.1\Sete.csprojAssemblyReference.cache
+C:\Users\andre\source\repos\Sete\Sete\obj\Debug\netcoreapp3.1\Sete.AssemblyInfoInputs.cache
+C:\Users\andre\source\repos\Sete\Sete\obj\Debug\netcoreapp3.1\Sete.AssemblyInfo.cs
+C:\Users\andre\source\repos\Sete\Sete\obj\Debug\netcoreapp3.1\Sete.csproj.CoreCompileInputs.cache
+C:\Users\andre\source\repos\Sete\Sete\bin\Debug\netcoreapp3.1\Sete.exe
+C:\Users\andre\source\repos\Sete\Sete\bin\Debug\netcoreapp3.1\Sete.deps.json
+C:\Users\andre\source\repos\Sete\Sete\bin\Debug\netcoreapp3.1\Sete.runtimeconfig.json
+C:\Users\andre\source\repos\Sete\Sete\bin\Debug\netcoreapp3.1\Sete.runtimeconfig.dev.json
+C:\Users\andre\source\repos\Sete\Sete\bin\Debug\netcoreapp3.1\Sete.dll
+C:\Users\andre\source\repos\Sete\Sete\bin\Debug\netcoreapp3.1\Sete.pdb
+C:\Users\andre\source\repos\Sete\Sete\obj\Debug\netcoreapp3.1\Sete.dll
+C:\Users\andre\source\repos\Sete\Sete\obj\Debug\netcoreapp3.1\Sete.pdb
+C:\Users\andre\source\repos\Sete\Sete\obj\Debug\netcoreapp3.1\Sete.genruntimeconfig.cache

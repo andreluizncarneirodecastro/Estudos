@@ -1,0 +1,13 @@
+C:\Users\andre\Desktop\Quatro\Quatro\bin\Release\netcoreapp3.1\Quatro.exe
+C:\Users\andre\Desktop\Quatro\Quatro\bin\Release\netcoreapp3.1\Quatro.deps.json
+C:\Users\andre\Desktop\Quatro\Quatro\bin\Release\netcoreapp3.1\Quatro.runtimeconfig.json
+C:\Users\andre\Desktop\Quatro\Quatro\bin\Release\netcoreapp3.1\Quatro.runtimeconfig.dev.json
+C:\Users\andre\Desktop\Quatro\Quatro\bin\Release\netcoreapp3.1\Quatro.dll
+C:\Users\andre\Desktop\Quatro\Quatro\bin\Release\netcoreapp3.1\Quatro.pdb
+C:\Users\andre\Desktop\Quatro\Quatro\obj\Release\netcoreapp3.1\Quatro.csprojAssemblyReference.cache
+C:\Users\andre\Desktop\Quatro\Quatro\obj\Release\netcoreapp3.1\Quatro.AssemblyInfoInputs.cache
+C:\Users\andre\Desktop\Quatro\Quatro\obj\Release\netcoreapp3.1\Quatro.AssemblyInfo.cs
+C:\Users\andre\Desktop\Quatro\Quatro\obj\Release\netcoreapp3.1\Quatro.csproj.CoreCompileInputs.cache
+C:\Users\andre\Desktop\Quatro\Quatro\obj\Release\netcoreapp3.1\Quatro.dll
+C:\Users\andre\Desktop\Quatro\Quatro\obj\Release\netcoreapp3.1\Quatro.pdb
+C:\Users\andre\Desktop\Quatro\Quatro\obj\Release\netcoreapp3.1\Quatro.genruntimeconfig.cache
