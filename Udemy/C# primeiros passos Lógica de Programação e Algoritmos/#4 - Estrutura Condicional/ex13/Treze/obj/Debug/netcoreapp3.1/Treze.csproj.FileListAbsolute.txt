@@ -1,0 +1,13 @@
+C:\Users\andre\Desktop\ \Git[Estudos]\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\Treze\Treze\bin\Debug\netcoreapp3.1\Treze.exe
+C:\Users\andre\Desktop\ \Git[Estudos]\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\Treze\Treze\bin\Debug\netcoreapp3.1\Treze.deps.json
+C:\Users\andre\Desktop\ \Git[Estudos]\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\Treze\Treze\bin\Debug\netcoreapp3.1\Treze.runtimeconfig.json
+C:\Users\andre\Desktop\ \Git[Estudos]\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\Treze\Treze\bin\Debug\netcoreapp3.1\Treze.runtimeconfig.dev.json
+C:\Users\andre\Desktop\ \Git[Estudos]\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\Treze\Treze\bin\Debug\netcoreapp3.1\Treze.dll
+C:\Users\andre\Desktop\ \Git[Estudos]\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\Treze\Treze\bin\Debug\netcoreapp3.1\Treze.pdb
+C:\Users\andre\Desktop\ \Git[Estudos]\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\Treze\Treze\obj\Debug\netcoreapp3.1\Treze.csprojAssemblyReference.cache
+C:\Users\andre\Desktop\ \Git[Estudos]\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\Treze\Treze\obj\Debug\netcoreapp3.1\Treze.AssemblyInfoInputs.cache
+C:\Users\andre\Desktop\ \Git[Estudos]\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\Treze\Treze\obj\Debug\netcoreapp3.1\Treze.AssemblyInfo.cs
+C:\Users\andre\Desktop\ \Git[Estudos]\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\Treze\Treze\obj\Debug\netcoreapp3.1\Treze.csproj.CoreCompileInputs.cache
+C:\Users\andre\Desktop\ \Git[Estudos]\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\Treze\Treze\obj\Debug\netcoreapp3.1\Treze.dll
+C:\Users\andre\Desktop\ \Git[Estudos]\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\Treze\Treze\obj\Debug\netcoreapp3.1\Treze.pdb
+C:\Users\andre\Desktop\ \Git[Estudos]\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\Treze\Treze\obj\Debug\netcoreapp3.1\Treze.genruntimeconfig.cache

@@ -1,0 +1,13 @@
+C:\Users\andre\Desktop\ \Git[Estudos]\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\ExercícioUri-1044\ExercícioUri-1044\bin\Debug\netcoreapp3.1\ExercícioUri-1044.exe
+C:\Users\andre\Desktop\ \Git[Estudos]\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\ExercícioUri-1044\ExercícioUri-1044\bin\Debug\netcoreapp3.1\ExercícioUri-1044.deps.json
+C:\Users\andre\Desktop\ \Git[Estudos]\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\ExercícioUri-1044\ExercícioUri-1044\bin\Debug\netcoreapp3.1\ExercícioUri-1044.runtimeconfig.json
+C:\Users\andre\Desktop\ \Git[Estudos]\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\ExercícioUri-1044\ExercícioUri-1044\bin\Debug\netcoreapp3.1\ExercícioUri-1044.runtimeconfig.dev.json
+C:\Users\andre\Desktop\ \Git[Estudos]\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\ExercícioUri-1044\ExercícioUri-1044\bin\Debug\netcoreapp3.1\ExercícioUri-1044.dll
+C:\Users\andre\Desktop\ \Git[Estudos]\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\ExercícioUri-1044\ExercícioUri-1044\bin\Debug\netcoreapp3.1\ExercícioUri-1044.pdb
+C:\Users\andre\Desktop\ \Git[Estudos]\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\ExercícioUri-1044\ExercícioUri-1044\obj\Debug\netcoreapp3.1\ExercícioUri-1044.csprojAssemblyReference.cache
+C:\Users\andre\Desktop\ \Git[Estudos]\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\ExercícioUri-1044\ExercícioUri-1044\obj\Debug\netcoreapp3.1\ExercícioUri-1044.AssemblyInfoInputs.cache
+C:\Users\andre\Desktop\ \Git[Estudos]\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\ExercícioUri-1044\ExercícioUri-1044\obj\Debug\netcoreapp3.1\ExercícioUri-1044.AssemblyInfo.cs
+C:\Users\andre\Desktop\ \Git[Estudos]\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\ExercícioUri-1044\ExercícioUri-1044\obj\Debug\netcoreapp3.1\ExercícioUri-1044.csproj.CoreCompileInputs.cache
+C:\Users\andre\Desktop\ \Git[Estudos]\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\ExercícioUri-1044\ExercícioUri-1044\obj\Debug\netcoreapp3.1\ExercícioUri-1044.dll
+C:\Users\andre\Desktop\ \Git[Estudos]\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\ExercícioUri-1044\ExercícioUri-1044\obj\Debug\netcoreapp3.1\ExercícioUri-1044.pdb
+C:\Users\andre\Desktop\ \Git[Estudos]\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\ExercícioUri-1044\ExercícioUri-1044\obj\Debug\netcoreapp3.1\ExercícioUri-1044.genruntimeconfig.cache

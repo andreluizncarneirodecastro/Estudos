@@ -1,0 +1,13 @@
+C:\Users\andre\Desktop\ \Git[Estudos]\Estudos\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\Dozw\Dozw\bin\Debug\netcoreapp3.1\Doze.exe
+C:\Users\andre\Desktop\ \Git[Estudos]\Estudos\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\Dozw\Dozw\bin\Debug\netcoreapp3.1\Doze.deps.json
+C:\Users\andre\Desktop\ \Git[Estudos]\Estudos\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\Dozw\Dozw\bin\Debug\netcoreapp3.1\Doze.runtimeconfig.json
+C:\Users\andre\Desktop\ \Git[Estudos]\Estudos\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\Dozw\Dozw\bin\Debug\netcoreapp3.1\Doze.runtimeconfig.dev.json
+C:\Users\andre\Desktop\ \Git[Estudos]\Estudos\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\Dozw\Dozw\bin\Debug\netcoreapp3.1\Doze.dll
+C:\Users\andre\Desktop\ \Git[Estudos]\Estudos\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\Dozw\Dozw\bin\Debug\netcoreapp3.1\Doze.pdb
+C:\Users\andre\Desktop\ \Git[Estudos]\Estudos\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\Dozw\Dozw\obj\Debug\netcoreapp3.1\Doze.csprojAssemblyReference.cache
+C:\Users\andre\Desktop\ \Git[Estudos]\Estudos\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\Dozw\Dozw\obj\Debug\netcoreapp3.1\Doze.AssemblyInfoInputs.cache
+C:\Users\andre\Desktop\ \Git[Estudos]\Estudos\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\Dozw\Dozw\obj\Debug\netcoreapp3.1\Doze.AssemblyInfo.cs
+C:\Users\andre\Desktop\ \Git[Estudos]\Estudos\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\Dozw\Dozw\obj\Debug\netcoreapp3.1\Doze.csproj.CoreCompileInputs.cache
+C:\Users\andre\Desktop\ \Git[Estudos]\Estudos\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\Dozw\Dozw\obj\Debug\netcoreapp3.1\Doze.dll
+C:\Users\andre\Desktop\ \Git[Estudos]\Estudos\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\Dozw\Dozw\obj\Debug\netcoreapp3.1\Doze.pdb
+C:\Users\andre\Desktop\ \Git[Estudos]\Estudos\c#\Nelio Primeiros Passos\#4 - Estrutura Condicional\Dozw\Dozw\obj\Debug\netcoreapp3.1\Doze.genruntimeconfig.cache
