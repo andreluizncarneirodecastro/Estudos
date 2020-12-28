@@ -1,0 +1,12 @@
+C:\Users\andre\Desktop\GIT [Estudos]\Estudos\Udemy\C# primeiros passos Lógica de Programação e Algoritmos\#5 - Estruturas Repetitivas\ex1\ex1\ex1\bin\Debug\netcoreapp3.1\ex1.exe
+C:\Users\andre\Desktop\GIT [Estudos]\Estudos\Udemy\C# primeiros passos Lógica de Programação e Algoritmos\#5 - Estruturas Repetitivas\ex1\ex1\ex1\bin\Debug\netcoreapp3.1\ex1.deps.json
+C:\Users\andre\Desktop\GIT [Estudos]\Estudos\Udemy\C# primeiros passos Lógica de Programação e Algoritmos\#5 - Estruturas Repetitivas\ex1\ex1\ex1\bin\Debug\netcoreapp3.1\ex1.runtimeconfig.json
+C:\Users\andre\Desktop\GIT [Estudos]\Estudos\Udemy\C# primeiros passos Lógica de Programação e Algoritmos\#5 - Estruturas Repetitivas\ex1\ex1\ex1\bin\Debug\netcoreapp3.1\ex1.runtimeconfig.dev.json
+C:\Users\andre\Desktop\GIT [Estudos]\Estudos\Udemy\C# primeiros passos Lógica de Programação e Algoritmos\#5 - Estruturas Repetitivas\ex1\ex1\ex1\bin\Debug\netcoreapp3.1\ex1.dll
+C:\Users\andre\Desktop\GIT [Estudos]\Estudos\Udemy\C# primeiros passos Lógica de Programação e Algoritmos\#5 - Estruturas Repetitivas\ex1\ex1\ex1\bin\Debug\netcoreapp3.1\ex1.pdb
+C:\Users\andre\Desktop\GIT [Estudos]\Estudos\Udemy\C# primeiros passos Lógica de Programação e Algoritmos\#5 - Estruturas Repetitivas\ex1\ex1\ex1\obj\Debug\netcoreapp3.1\ex1.AssemblyInfoInputs.cache
+C:\Users\andre\Desktop\GIT [Estudos]\Estudos\Udemy\C# primeiros passos Lógica de Programação e Algoritmos\#5 - Estruturas Repetitivas\ex1\ex1\ex1\obj\Debug\netcoreapp3.1\ex1.AssemblyInfo.cs
+C:\Users\andre\Desktop\GIT [Estudos]\Estudos\Udemy\C# primeiros passos Lógica de Programação e Algoritmos\#5 - Estruturas Repetitivas\ex1\ex1\ex1\obj\Debug\netcoreapp3.1\ex1.csproj.CoreCompileInputs.cache
+C:\Users\andre\Desktop\GIT [Estudos]\Estudos\Udemy\C# primeiros passos Lógica de Programação e Algoritmos\#5 - Estruturas Repetitivas\ex1\ex1\ex1\obj\Debug\netcoreapp3.1\ex1.dll
+C:\Users\andre\Desktop\GIT [Estudos]\Estudos\Udemy\C# primeiros passos Lógica de Programação e Algoritmos\#5 - Estruturas Repetitivas\ex1\ex1\ex1\obj\Debug\netcoreapp3.1\ex1.pdb
+C:\Users\andre\Desktop\GIT [Estudos]\Estudos\Udemy\C# primeiros passos Lógica de Programação e Algoritmos\#5 - Estruturas Repetitivas\ex1\ex1\ex1\obj\Debug\netcoreapp3.1\ex1.genruntimeconfig.cache

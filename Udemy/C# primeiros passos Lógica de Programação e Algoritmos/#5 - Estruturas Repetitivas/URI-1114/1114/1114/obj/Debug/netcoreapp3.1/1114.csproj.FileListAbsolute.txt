@@ -1,0 +1,12 @@
+C:\Users\andre\Desktop\GIT [Estudos]\Estudos\Udemy\C# primeiros passos Lógica de Programação e Algoritmos\#5 - Estruturas Repetitivas\URI-1114\1114\1114\bin\Debug\netcoreapp3.1\1114.exe
+C:\Users\andre\Desktop\GIT [Estudos]\Estudos\Udemy\C# primeiros passos Lógica de Programação e Algoritmos\#5 - Estruturas Repetitivas\URI-1114\1114\1114\bin\Debug\netcoreapp3.1\1114.deps.json
+C:\Users\andre\Desktop\GIT [Estudos]\Estudos\Udemy\C# primeiros passos Lógica de Programação e Algoritmos\#5 - Estruturas Repetitivas\URI-1114\1114\1114\bin\Debug\netcoreapp3.1\1114.runtimeconfig.json
+C:\Users\andre\Desktop\GIT [Estudos]\Estudos\Udemy\C# primeiros passos Lógica de Programação e Algoritmos\#5 - Estruturas Repetitivas\URI-1114\1114\1114\bin\Debug\netcoreapp3.1\1114.runtimeconfig.dev.json
+C:\Users\andre\Desktop\GIT [Estudos]\Estudos\Udemy\C# primeiros passos Lógica de Programação e Algoritmos\#5 - Estruturas Repetitivas\URI-1114\1114\1114\bin\Debug\netcoreapp3.1\1114.dll
+C:\Users\andre\Desktop\GIT [Estudos]\Estudos\Udemy\C# primeiros passos Lógica de Programação e Algoritmos\#5 - Estruturas Repetitivas\URI-1114\1114\1114\bin\Debug\netcoreapp3.1\1114.pdb
+C:\Users\andre\Desktop\GIT [Estudos]\Estudos\Udemy\C# primeiros passos Lógica de Programação e Algoritmos\#5 - Estruturas Repetitivas\URI-1114\1114\1114\obj\Debug\netcoreapp3.1\1114.AssemblyInfoInputs.cache
+C:\Users\andre\Desktop\GIT [Estudos]\Estudos\Udemy\C# primeiros passos Lógica de Programação e Algoritmos\#5 - Estruturas Repetitivas\URI-1114\1114\1114\obj\Debug\netcoreapp3.1\1114.AssemblyInfo.cs
+C:\Users\andre\Desktop\GIT [Estudos]\Estudos\Udemy\C# primeiros passos Lógica de Programação e Algoritmos\#5 - Estruturas Repetitivas\URI-1114\1114\1114\obj\Debug\netcoreapp3.1\1114.csproj.CoreCompileInputs.cache
+C:\Users\andre\Desktop\GIT [Estudos]\Estudos\Udemy\C# primeiros passos Lógica de Programação e Algoritmos\#5 - Estruturas Repetitivas\URI-1114\1114\1114\obj\Debug\netcoreapp3.1\1114.dll
+C:\Users\andre\Desktop\GIT [Estudos]\Estudos\Udemy\C# primeiros passos Lógica de Programação e Algoritmos\#5 - Estruturas Repetitivas\URI-1114\1114\1114\obj\Debug\netcoreapp3.1\1114.pdb
+C:\Users\andre\Desktop\GIT [Estudos]\Estudos\Udemy\C# primeiros passos Lógica de Programação e Algoritmos\#5 - Estruturas Repetitivas\URI-1114\1114\1114\obj\Debug\netcoreapp3.1\1114.genruntimeconfig.cache
