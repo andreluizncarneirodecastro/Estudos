@@ -1,0 +1,18 @@
+1.1. scholar.google/fake news impact 
+Fake news detection on social media: A data mining perspective - Citado por 672
+https://dl.acm.org/doi/pdf/10.1145/3137597.3137600
+
+1.2 
+The rise of social Bots - Citado por 1082
+https://dl.acm.org/doi/pdf/10.1145/2818717 
+
+1.3
+The Implementation of a Web Crawler URL Filter Algorithm Based on Caching (2009)
+https://www.computer.org/csdl/pds/api/csdl/proceedings/download-article/12OmNBKEytb/pdf
+
+(nessa parte do web crawler, achei uns outros muito interessantes também, além de ter um do site: ieeexplore.ieee.org, que mesmo fazendo login não consegui acessar, e me parecia bem interessante também. - No txt que eu vou mandar tem os outros links)
+
+1.4
+ A news story categorization system
+https://www.aclweb.org/anthology/A88-1002.pdf - citado por 101
+--Sistema de categorização de notícias--

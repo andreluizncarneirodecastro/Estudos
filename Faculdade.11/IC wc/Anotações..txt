@@ -1,0 +1,406 @@
+Levantamento do impacto social que as Fake News geram;
+Implementação de um Web Crawler;
+Sistema que consiga identificar notícias de mesmo assunto;
+Sistema que consiga categorizar as notícias;
+Sistema que consiga classificar as notícias e;
+Utilização do trabalho em projetos comerciais (principalmente agências de marketing / reportagens).
+
+De fato, para nós termos resultados muito interessantes, seria ideal aliarmos aprendizado de máquina com análise de linguagem natural.
+ No entanto, um trabalho englobando estas duas técnicas levaria bastante tempo e tem alta complexidade (algo digno de um mestrado). 
+*PS: inclusive, conheço professores que muito provavelmente aceitariam a continuação deste trabalho para o início de um mestrado, caso você faça 
+um bom trabalho base.
+
+Desta forma, eu penso neste trabalho de TCC como uma base muito bem feita fazendo as análises sob algoritmos mais simples.
+ Por exemplo: fazer toda a parte do crawler, de levantamento das notícias. Fazer a parte da classificação das notícias (se tratam do mesmo tema ou não),
+ e implementar algum algoritmo de análise da notícia (note que aqui há a possibilidade de usar aprendizado de máquina, mas podemos fazer uma análise mais "humana",
+ onde nós pensamos em quais os passos que os seres humanos usam para detectar se uma notícia é false e implementamos um algoritmo sobre estes passos).
+
+A minha sugestão inicial foi a partir deste pensamento. Nós sabemos se uma notícia é falsa quando várias fontes de credibilidade 
+(e isso seria parte do algoritmo, atribuir um "fator de credibilidade" para as fontes) 
+apontam que a notícia em questão (cujo teor da notícia seja o mesmo que nós estamos analisado - parte do algoritmo detectar isso)
+ é falsa (detectamos isso procurando por frases que denotam que algo é falso, principalmente pela detecção das palavras como "fake", "Mentira", etc. 
+- esta parte que seria a implementação de algoritmos de linguagem natural).
+--------------------------------------------------------------------------------------------------------------------------
+1. scholar.google/fake news impact 
+Fake news detection on social media: A data mining perspective - Citado por 672
+https://dl.acm.org/doi/pdf/10.1145/3137597.3137600
+
+Abstract: Fala como a fake news é feita com intenção de enganar leitores que estão atrás das notícias,
+e que alguns algorítmos de detecção existentes nas mídias tradicionais são ineficazes ou não aplicáveis.
+Dado a questão de algorítmos não terem uma forte precisão em relação a isso, a pesquisa encontrada foi realizada.
+Sera mostrado: Detecção de notícias falsas em mídias sociais, incluindo caracterizações de notícias falsas
+sobre psicologia e teorias sociais, algoritmos existentes a partir de dados na perspectiva de mineração, 
+métricas de avaliação e conjuntos de datasets.
+
+[1]
+Introduction: Nos dias atuais graças ao surgimento da internet e em comparação como era antigamente 
+com os meios de comunicação existentes,o consumo de conteúdo aumentou, com isso as fake news também aumentaram. 
+Ele relata como a fake news é utilizada na política e como foi utilizada na nova eleição presidencial de 2016 no U.S.,
+como as fake news podem ter um impacto negativo nas pessoas e na sociedade por quebrar a autencidade do ecossistema de 
+notícias e como notícias falsas persuadem intencionalmente consumidores a aceitar crenças tendenciosas ou falsas.
+Ele deu varios exemplos.
+Citou a forma em que ela é usada algumas vezes, como distorcendo uma verdade ou tirando sarro de uma notícia verdadeira,
+pra que ela perca credibilidade. 
+
+Sera discutido uma visão geral da detecção de notícias falsas e as direções promissoras da pesquisa. 
+*uma das chaves*
+É que a detecção de notícias falsas nas mídias sociais ainda estão no inicio da idade de desenvolvimento,
+possuindo ainda muitos problemas dos quais precisam ter investigações para resolver os problemas.
+
+"É necessário discutir possíveis direções de pesquisa que possam melhorar os recursos de detecção 
+                                                                       e mitigação de notícias falsas"
+ 
+-characterization and detection- é um ponto em que eles abordam para as detecções dos problemas.
+
+Sessão 2: Definição de fake news e caracterizando-a e comparando com as teorias e propriedades da midia social.
+Sessão 3: definindo as fake news detectando os problemas e resumindo os metodos de detecção da mesma.
+Sessão 4: Discutindo os datasets e métricas de avaliação
+
+[2]
+[2.1]
+Por não ter uma definição exata, como por exemplo: "Fake news" alguns assuntos foram colocados em pauta
+detalhando e comparando algumas definições que são usadas na falsificação.
+
+Pontuou dois recursos da definição da fake news, do qual são: Autencidade e Intenção. 
+Primeiramente as notícias falsas incluem informações falsas que podem ser verificadas no caso.
+Segundo as notícias falsas são criadas com intenção desonesta de enganar os consumidores.
+Tendo definições mais amplas das quais concentram na autencidade ou na intenção do conteúdo das notícias.
+E alguns trabalhos como a sátira que embora tenha sido criada para o entretenimento, acaba propagando
+uma notícia falsa de qualquer modo.
+
+
+E através de um diagrama mostrou os pontos de caracterização e detecção de uma notícia falsa
+tanto da fake news na midia tradicional quanto da fake news na midia social 
+definindo que temos 3 campos para a definição dos mesmos, sendo eles:
+- a intenção subjacente de notícias falsas fornece tanto valor teórico e prático que permite uma compreensão e análise mais aprofundadas deste tópico.
+- Segundo, qualquer técnica para verificação da verdade que se aplica à concepção restrita Também podem ser aplicadas notícias falsas 
+ sob a definição mais ampla.  
+- Terceiro, essa definição é capaz de eliminar as ambiguidades entre notícias falsas e conceitos relacionados que não são
+considerados neste artigo. 
+
+Apontou algumas definições de notícias que não são fake news, são elas: 
+- notícias de sátira com contexto adequado, que não tem a intenção de enganar consumidores e dificilmente será mal interpretado como factual;
+- rumores que não se originaram de eventos noticiosos;
+- teorias da conspiração, difíceis de verificar como verdadeiras ou falsas;
+- desinformação criada sem intenção
+- trotes que são motivados apenas por diversão 
+
+[2.2]
+
+Fundações da psicologia(um dos temas apresentados no diagrama na caracterização)
+Dado o fato de que os humanos não conseguem diferenciar exatamente o que é real ou falso, em relação as notícias.
+Existem aspectos psicológicos e cognitivos teóricos que podem explicar o fenômeno dessa influencia de notícias falsas
+sobre as pessoas. As notícias falsas tradicionais visam principalmente os consumidores, explorando suas vulnerabilidades 
+individuais.
+Existem 2fatores principais que tornam os consumidores naturalmente vulneráveis ​​a notícias falsas: 
+1 - Realismo e Ingenuidade
+consumidores tendem a acreditar que suas percepções da realidade são as únicas
+visualizações precisas, enquanto outros que discordam são considerados
+desinformados, irracionais ou tendenciosos. 
+2- confirmação viés: os consumidores preferem receber informações que confirmam
+suas visões existentes do mundo e da realidade em que vivem.
+
+Devido a esses fatores cognitivos inerentes à natureza humana, as notícias falsas podem ser percebidas como reais
+pelos consumidores. Além disso, uma vez que a percepção equivocada é formada,é muito difícil corrigi-la.
+Estudos de psicologia mostram que a correção de informações falsas (ex, notícias falsas) 
+pela apresentação de informações factuais verdadeiras não é
+apenas inútil reduzir percepções errôneas, mas às vezes pode até aumentar
+as percepções errôneas, especialmente entre grupos ideológicos.
+
+
+Fundações sociais do ecossistema Fake News.(um dos temas apresentados no diagrama na parte de caracterização)
+O desejo de maximizar uma recompensa através de fake news se aplica a uma aceitação continuada de outras pessoas na rede 
+social imediata de um usuário rede.A Teoria da identidade social  e
+a Teoria da influência normativa explicam bem sobre isso. Com isso essa preferência por
+aceitação e afirmação são essenciais para a identidade de uma pessoa
+e auto-estima, aumentando a probabilidade de os usuários escolherem opções ao consumir e divulgar informações noticiosas,
+seguindo as normas estabelecidas na comunidade até se as notícias compartilhadas forem falsas.
+Essa teoria racional das interações com notícias falsas pode ser modelada de uma perspectiva teórica do jogo econômico por
+formulação do ciclo de geração e consumo de notícias como
+jogo de estratégia para dois jogadores. Para explicar sobre as notícias falsas, assumi que existem dois tipos de atores-chave nas informações: 
+editor e consumidor.
+
+Para o editor temos duas perspectivas: 
+- curto prazo utilidade: o incentivo para maximizar o lucro, que é positivamente
+correlacionado com o número de consumidores atingidos; 
+- utilidade a longo prazo: sua reputação em termos de autenticidade das notícias.
+
+A utilidade dos consumidores consiste em duas partes: 
+- informações utilidade: obter informações verdadeiras e imparciais (geralmente é necessário um custo extra de investimento); 
+- utilidade psicológica: receber notícias que satisfazem suas opiniões e necessidades sociais anteriores, por exemplo, viés de confirmação e 
+ teoria da perspectiva.
+ Tanto o editor quanto o consumidor tentam maximizar suas utilidades gerais neste jogo de estratégia do processo de consumo de notícias. 
+Nós podemos capturar o fato de que notícias falsas acontecem quando o utilitário de curto prazo domina a utilidade geral e a psicologia de um editor
+domina a utilidade geral do consumidor e um equilíbrio é mantido.
+ Isso explica a dinâmica social que leva para um ecossistema de informações onde notícias falsas podem prosperar.
+
+[2.3]
+Fake news nas mídias sociais(segundo tema do diagrama de caracterização)
+Nesse tópico ele destaca os principais recursos de notícias falsas que são ativados por
+mídia social. Orientando que notícias falsas tradicionais também são aplicáveis ​​às mídias sociais
+
+Contas maliciosas na midia social para propaganda.
+While many users on social media are legitimate, social media users may also be malicious, and in some cases are not
+even real humans. The low cost of creating social media accounts also encourages malicious user accounts, such as
+social bots, cyborg users, and trolls. O social bot que é muito utilizado no twitter se refere a uma conta que é controlada
+por um algoritmo do qual tem contato com os humanos, temos um caso no twitter no Brasil que se enquadra nesse aspecto.
+Recentemente a deputada Joyce e mais umas outras pessoas, foram acusados de compartilhar fake news através dos robôs
+conhecidos no twitter.
+. Social bots can become malicious entities designed specifically with the purpose to do harm, such as manipulating and spreading
+fake news on social media. Studies shows that social bots distorted the 2016 U.S. presidential election online discussions on a large scale,
+and that around 19 million bot accounts tweeted in support of either Trump or Clinton in the week leading up to election day.
+Trolls, real human users who aim to disrupt online communities and provoke consumers into an emotional response, are also playing an
+important role in spreading fake news on social media. For example, evidence suggests that there were 1,000 paid Russian trolls spreading 
+fake news on Hillary Clinton.
+*Pesquisar sobre trolling on tt*
+Na internet as pessoas são afetadas altamente pelo humor e no contexto de discussões on-line do qual permite
+a fácil disseminação de notícias falsas entre comunidades. Contudo, o efeito disso é acionar nas pessoas
+emoções negativas internas, como raiva e medo, resultantes em dúvida, desconfiança e comportamento irracional.
+Finalmente, cyborg os usuários podem espalhar notícias falsas de uma maneira que mescla
+atividades com contribuição humana. Geralmente, as contas ciborgues são
+registrado por humanos como uma camuflagem e definir programas automatizados para realizar atividades nas mídias sociais.
+ A mudança fácil de funcionalidades entre humanos e bot oferece aos usuários de cyborg
+oportunidades únicas para espalhar notícias falsas. Em poucas palavras,
+essas contas maliciosas altamente ativas e partidárias nas mídias sociais tornam-se as poderosas fontes e proliferação de
+notícias falsas.
+
+Echo Chamber Effect.
+A mídia social fornece um novo paradigma de criação e consumo de informações para os usuários. 
+O processo de busca e consumo de informações está mudando de uma forma mediada (por exemplo, por jornalistas) 
+para uma forma mais maneira desintermediada. Os consumidores são seletivamente expostos a certos tipos de notícias 
+devido à maneira como as notícias aparecem no feed e em sua página inicial nas mídias sociais, ampliando
+os desafios psicológicos para dissipar as notícias falsas identificadas acima. 
+Por exemplo, os usuários do Facebook sempre seguem pessoas e, assim, recebem notícias que promovem sua
+favorecem as suas narrativas existentes. Portanto, usuários de redes sociais
+nos meios de comunicação tendem a formar grupos contendo pessoas com ideias semelhantes
+onde eles polarizam suas opiniões, resultando em um eco
+"efeito de câmara" - Echo Chamber Effect - Que também é conhecido como um echo de uma caverna, por assim dizer,
+é uma analogia da maneira em que se espalham as notícias, como uma voz ecoando em uma caverna. 
+O efeito da câmara de eco facilita o processo de criação de bots. O processo pelo qual as pessoas consomem e 
+acreditam em notícias falsas devido a os seguintes fatores psicológicos:
+- credibilidade social, o que significa que as pessoas têm maior probabilidade de perceber uma fonte com
+ credibilidade se outros perceberem que a fonte também é, especialmente quando não houver informações suficientes 
+disponíveis para acessar o veracidade da fonte; 
+- heurística de frequência, que significa que os consumidores podem favorecer naturalmente as informações que eles
+ouçam com freqüência, mesmo que sejam notícias falsas. Estudos têm mostrado que o aumento da exposição a uma ideia 
+é suficiente para gerar uma opinião positiva sobre ela. E em câmaras de eco, usuários
+continuam compartilhando e consumindo as mesmas informações. 
+Como resultado, esse efeito da câmara de eco cria comunidades segmentadas e homogêneas com um ecossistema de 
+informações muito limitado. Pesquisas mostram que comunidades homogêneas
+tornam-se o principal fator de difusão da informação que fortalece ainda mais a polarização.
+
+*modo de operação* - utilizou machine learning
+[3] FAKE NEWS DETECTION
+Publisher and Content.
+*Publisher: includes a set of profile features to describe the original author, such as name, domain, age, 
+among other attributes.
+Content consists of a set of attributes that represent the news article and includes headline, text, image, etc.*
+A seguir ele descreve o social news como um conjunto de tuplas que representam o processo de notícias espalhados
+ao longo do tempo entre N usuários, linkando o numero n de usuários U = {u1, u2, ... , un}
+e seus posts correspondentes P = {p1, p2, ... , pn} em mídia social referente a cada artigo.
+Utilizou cada engajamento eit = {ui, pi, t} representa que a interface do usuário do usuário se espalha
+artigo de notícias a usando pi no tempo t. t = Nulo se o artigo a ainda não tiver nenhum envolvimento e, portanto,
+ a interface do usuário representa o editor.
+A tarefa de detecção de notícias falsas é prever se as notícias o artigo a é uma notícia falsa ou não,
+ou seja, F: E → {0, 1} de tal modo que,
+F (a) = 1, se a é uma notícia falsa, 0, caso contrário.
+
+F é a função de previsão que queremos aprender.
+
+Observe que definimos a detecção de notícias falsas como um problema de classificação binária pelo seguinte motivo: 
+notícias falsas são essencialmente um viés de distorção nas informações manipuladas pelo
+editor. De acordo com pesquisas anteriores sobre o viés da mídia, o viés de distorção é geralmente modelado como um
+problema de classificação.
+A seguir, propomos uma estrutura geral de mineração de dados para
+detecção de notícias, que inclui duas fases: 
+- extração de recursos e construção de modelos. A extração do recurso
+fase visa representar o conteúdo de notícias e auxiliar informações relacionadas
+em uma estrutura matemática formal e modelo fase de construção cria modelos de aprendizado de máquina
+para diferenciar melhor as notícias falsas e as reais, com base no representações de recursos.
+
+
+[3.2 em diante falta ler]
+--------------------------------------------------------------------------------------------------------------------------
+2.) 
+The rise of social Bots - - Citado por 1082
+https://dl.acm.org/doi/pdf/10.1145/2818717 
+
+Pagina 1: 
+Faz uma breve introdução do algoritmo, dizendo que foi previsto pelo alan turing essa comunicação entre o computador
+e o humano. Do qual esse sonho de construir um algoritmo que conversasse com um humano é estudado e desejado por anos.
+(muitas coisas citadas já estavam no artigo anterior);
+Cita os insights dos bots, que geralmente tem uma boa causa por trás, contudo é utilizado para enganar os usuários de midia social.
+Um outro é que eles estão sendo infiltrados para discursos políticos e fala sobre 
+* sistemas de detecção propostos no contas de literatura para redes técnicas, estratégias de crowdsourcing, aprendizado supervisionado 
+baseado em recursos e sistemas híbridos. *
+
+Pagina 3: ja tem no 1° artigo, fala sobre ele ser potencialmente usado pra causar prejuizos e etc.
+Mas possui uma imagem interessante que trata de uma visualização de rede que ilustra como os robôs são usados ​​para afetar 
+e possivelmente manipulam o debate on-line sobre a política de vacinação.
+É a rede de retweet da hashtag # SB277, sobre uma lei recente da Califórnia sobre requisitos e isenções de vacinação. Nos
+representam usuários do Twitter e os links mostram como as informações se espalham entre os usuários. O tamanho do nó representa influência (vezes que um usuário é
+retweetado), a cor representa as pontuações dos bot: os nós vermelhos têm grande probabilidade de serem contas de bot, os nós azuis têm probabilidade de serem humanos
+
+Pagina 4:Um fato interessante foi uma pontuação que eles fizeram que houve alegações de que os sinais do Twitter podem ser aproveitados 
+para prever o mercado de ações, tendo uma quantidade crescente de evidências mostrando que os operadores do mercado prestão a
+atenção e reagem prontamente às informações das mídias sociais. Citando o exemplo que a síria invadiu o tt e postou um boato falso
+sobre um terror de ataque a casa branca, isso influenciou de mais o mercado de ações.
+Act Like a Human, Think Like a Bot
+Early bots mainly performed one type of activity: posting content automatically
+These bots were naive and easy to spot by trivial detection strategies, such as focusing on high volume of content generation.
+* In 2011, James Caverlee’s team at Texas A&M University implemented a "honeypot trap" that managed to detect thousands of social bots. *
+* In recent years, Twitter bots have become increasingly sophisticated,making their detection more difficult. 
+The boundary between humanlike and bot-like behavior is now fuzzier * - Nada motivador kkk
+Depois ele da um exemplo interessante (reler aqui)
+
+Pagina 5: A Taxonomy of Social Bot Detection Systems.
+bem interessante ele define dois tipos de taxonomia:
+ bot detection systems based on social network information; systems based on crowdsourcing and leveraging
+human intelligence; and, machinelearning(explicado no anterior - mas tenho que ver se utiliza metodo diferente) methods based on the identification 
+of highly revealing features that discriminate between bots and humans.
+
+Pagina 5: Graph-Based Social Bot Detection
+The challenge of social bot detection has been framed by various teams in an adversarial setting. Descreveram um exemplo com suas vantagens
+e desvantagens.
+
+Pagina 6: Crowdsourcing Social Bot Detection
+"Crowdsourcing" é um modelo de produção e de estruturação de processos que utiliza a sabedoria e os aprendizados coletivos para a resolução de problemas
+ ou desenvolvimento de uma solução. "
+Aqui falam sobre o teste do alan turing que foi criado, usando o data do facebook e renren, testaram as eficiencias em humanos
+Essa estratégia usada exibe um valor próximo de zero em relação a taxa de falsos positivos, 
+um recurso muito desejável para um provedor de serviços.
+Também disse as desvantagens no 2° paragrafo do crowdsourcing. Juntamente com uma tabela de classes 
+que são empregados por sistemas baseados em recursos para detecção de bots sociais.
+
+
+Feature-Based Social Bot Detection
+Pagina 7: Recursos comuns usados ​​para detecção de bots sociais - Figura 1 : com 3 recursos comuns usados ​​para detecção de bots sociais. 
+Figura 2 - Comportamentos do usuário que melhor discriminam os robôs sociais dos humanos
+--  Os robôs estão mudando continuamente
+e evoluindo: a análise dos comportamentos altamente preditivos que os sistemas baseados em recursos podem detectar pode revelar
+padrões interessantes e fornecer oportunidades únicas de entender como diferenciar os robôs e os humanos --
+Através da figura 2 da pra deduzir se uam conta provavelmente é um bot ou um usuario legitimo, contudo é necessario
+adquirir estratégias para tornar essa comparação mais eficiente. E algumas vezes os resultados exibem uma mistura de recursos
+humanos e de bots sociais, que as vezes são chamados de cyborgs.
+
+Combining Multiple Approaches
+Alvisi et al.3 - reconheceu primeiro a necessidade de adoção de técnicas de detecção complementares para lidar efetivamente
+com ataques sybil nas redes sociais. O detector Renren Sybil37,42 é um exemplo de sistema que explora várias dimensões do comportamento 
+dos usuários como atividade e informações de tempo.
+O exame de dados de fluxo de cliques verdadeiros mostra que usuários reais
+gastam comparativamente mais tempo enviando mensagens e olhando para os outros usuários
+conteúdo (como fotos e vídeos), enquanto as contas Sybil gastam o tempo na fazendo amizade com outras contas. Intuitivamente, 
+atividades de bot tendem a ser mais simples em termos de variedade de comportamento exibidos.
+
+Ao identificar também indicadores altamente preditivos recursos como frequência de convite,
+solicitações de saída aceitas e coeficiente de cluster de rede, Renren
+é capaz de classificar as contas em duas categorias: como bot e como humano. 42 contas Sybil
+em Renren tendem a conspirar e trabalhar juntos para espalhar conteúdo semelhante:
+este sinal adicional, codificado como conteúdo e semelhança temporal, é usado para detectar contas em conluio.
+--------------------------------------------------------------------------------------------------------------------------
+3.  Web Crawler [só dei uma olhada por cima rapida desses a seguir] 
+- http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.402.8149&rep=rep1&type=pdf#page=328
+- https://www.researchgate.net/publication/258789938_Web_Crawler_A_Review
+- cant acess - Web crawler real time detection - even with login (in ieeexplore.ieee.org)
+
+
+Sobre esse: The Implementation of a Web Crawler URL Filter Algorithm Based on Caching (2009)
+https://www.computer.org/csdl/pds/api/csdl/proceedings/download-article/12OmNBKEytb/pdf
+
+Para fazer o web crawler primeiramente teria que ter um bom conhecimento em Regexp(regular expression) uma vez que precisará reconhecer padrões para
+fazer buscas precisas sobre o conteúdo desejado no site.
+Esse módulo de filtro desempenhara papéis importantes em um rastreador da Web que acaba sendo um
+componente central de um mecanismo de pesquisa. O módulo de filtro influencia a eficiência de todo o sistema de coleta
+diretamente. Neste artigo presente acima apresenta um algoritmo de filtro de URL baseado em
+catch e sua implementação. Os desempenhos de estabilidade e paralelismo do algoritmo são verificados pelos experimentos para
+sites que lidam com um grande número de páginas da web. 
+
+
+Pela grande quantia de informações que existem na internet, esse mecanismo de pesquisa é excepcional e ele consiste
+de um endereço de URL sozinho que visita a lista de URLS especificadas 
+
+Como a figura mostra, o web crawler inicia da URL (chamado de URL de propagação) para visitar a internet.
+O page download obtém um URL de lista de URL's para baixar a página da internet, e transfere a pagina para o 
+extrator de link. Com isso o page downloader verifica os parametros de acordo com os requisitos de rastreamento para 
+decidir se deseja ou não fazer o download de páginas. Enquanto o rastreador visita esses URL's o extrator de link identifica
+todos os hiperlinks nas páginas de acordo com os requisitos de rastreamento, transferindo-os para o URL filtro que armazena os resultados
+na lista de URL's. 
+O The Crawling parameter assistor fornece a cfg de parametro para as necessidades de todas as partes do rastreador.
+
+III. THE COMMON METHODS OF THE URL FILTER
+Para evitar que os downloads se repitam, tem uma forma de eliminar a repetição dos URLS.
+O url filter pode facilmente se tornar um gargalo na perfomance do sistema do cralwer, pois
+a lista vai ficando cada vez maior.
+
+The main idea of the URL filter is to determine whether
+an URL exists in the known URL list. The URL query
+algorithm is the key. The basic process is for each string of
+the URL analyzed by a web page to be compared with the
+each string in the known URL list. If it is a repetitive URL,
+then be abandon directly, or a new URL, then be added to
+the URL list. 
+
+
+metodos de filtragem para o URL:
+- Filtro baseado em tabela de hash
+
+A função hash converte um conjunto de palavras-chave em um número limitado conjunto de endereços consecutivos
+ (ou faixa) nos quais o “mapa” de keywords é o local de armazenamento. O processo é chamado
+hash e os endereços de armazenamento são chamados endereços de hash. 
+A tabela de hash é adequada para lidar com a localização
+string porque converte a string em um número inteiro e
+associa a string a um endereço para controlar o
+complexidade do algoritmo de busca, que é
+inteiramente superior aos outros algoritmos de busca.
+
+-Filtro baseado no filtro bloom
+
+Ele é adequado para operação de consulta de dados em massa
+para cada
+URL, um filtro Bloom produz valores aleatórios usando as funções khash e define 1 no local correspondente de um
+vetor de bit. Portanto, se usarmos um Filtro Bloom para armazenar a lista de URLs, o tamanho da lista de URLs é apenas o tamanho do vetor de bits e 
+podemos otimizar bastante o espaço e agilizar a consulta em as restrições de tempo e a taxa de erros judiciais.
+
+A Bloom Filter has the advantages of high speed and
+saving storage space, so mass data can be represented easily
+and accessed fast, but in the use of a Bloom Filter to
+determine whether an element belongs to a set, there will be
+a certain false positive rate. That is, an element that is
+inexistent in a set may be mistakenly believed that it already
+consisted in the set. But an element that is already existent in
+a set can’t be mistakenly believed that it has not consisted in
+this set, there is no false negative. A Bloom Filter can save a
+lot of storage space by allowing a small amount false
+positive rate. 
+
+Basicamente nesses topicos acima, ele descreve os metodos de filtragem,
+sendo por hash table e bloom filter. 
+
+IV. THE URL FILTER ALGORITHM BASED ON CACHING
+
+A ideia aqui é sobre como o crawler faz o download das paginas e analisa as mesmas,
+explicando sobre a filtragem e como elimina as duplicadas. Da qual usufrui de uma fila de armazenamento
+que por ser em cache é muito alta, que significa que quanto mais dos URLs analisados ​​pelo programa rastreador 
+estão na fila de cache, apenas cerca de 10% a 20% deles precisavam verificar o base de dados. 
+Isso economiza muito tempo para consultar um novo URL e não precisa consultar o banco de dados
+na maioria das situações
+
+V. ALGORITHM IMPLEMENTATION AND PERFORMANCE
+EVALUATION
+
+Experimentos realizados de acordo com o tipo de rastreamentos realizados.
+--------------------------------------------------------------------------------------------------------------------------
+4. A news story categorization system
+https://www.aclweb.org/anthology/A88-1002.pdf - citado por 101
+--Sistema de categorização de notícias--
+
+Este artigo mostra uma alta precisão automática na categorização de texto, pelo qual é viável para textos que cobrem um
+conjunto diversificado de tópicos, usando a técnica de processamento de linguagem natural.
+
+Esse tipo de processamento tem muitos potenciais aplicações com altos retornos econômicos no
+encaminhamento e arquivamento de notícias, artigos eletrônicos mensagens ou outras formas de texto on-line. Muitos desses sistemas estarão em uso comercial dentro dos próximos anos
+--------------------------------------------------------------------------------------------------------------------------
+
+another links
+https://jornal.usp.br/universidade/grupo-de-divulgacao-cientifica-da-usp-mostra-anatomia-das-fake-news/
+https://medium.com/@thepen0411/web-crawling-tutorial-in-c-48d921ef956a
