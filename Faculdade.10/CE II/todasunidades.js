@@ -10,7 +10,7 @@ switch (expr2)
     case '2':
     console.log(".::::: Estrela-Triangulo ::::::.") 
 
-    console.log("Um circuito trifásico estrela triângulo de sequência positiva possui Van= 200|_0°V e ZDelta = 8|_40°Ohms")
+    console.log("Q2) Um circuito trifásico estrela triângulo de sequência positiva possui Van= 200|_0°V e ZDelta = 8|_40°Ohms")
     console.log("Determine as correntes de fase, as correntes de linha e as tensões de linha de todas as cargas \n")
   
     let van2 = parseFloat(readlineSync.question('Modulo de Van: ')) //módulo
@@ -50,7 +50,7 @@ switch (expr2)
   
       case '3':
         console.log(".::::: Estrela-Estrela ::::::.") 
-        console.log("Exemplo 1: Um circuito trifásico estrela-estrela de sequência positiva possui Van = 100|_0° V, ZLT = 1 + j2 Ohms e Zy = 10|_30° Ohms")
+        console.log("Q3) Um circuito trifásico estrela-estrela de sequência positiva possui Van = 100|_0° V, ZLT = 1 + j2 Ohms e Zy = 10|_30° Ohms")
         console.log("Determine as correntes de linha e as tensões nas cargas de todas as fases além da corrente no neutro. " + "\n")
         console.log("Solução: A partir do EQUIVALENTE MONOFASICO da fase A, temos que a corrente de linha será:")
         
@@ -133,4 +133,71 @@ switch (expr2)
         console.log("\n "+ " Somando-os e dando 0, o circuito é equilibrado")
 }
 
+case '2':
+  const expr2 = readlineSync.question('Qual ex?' + '\n')
+  switch (expr2)
+  {
+    case 1:
+    console.log("Q1) Uma carga trifasica ligada em delta, possui ")
+    console.log("P30 = 1500w e é ligada em fonte trifásica com 220Vrms de tensõa de linha.")
+    console.log("O Fp da carga por 20° atrasado.")
+    console.log("I) A potencia ativa por fase é 500w?")
+    console.log("II) A Carga tem caracteristicas capacitivas?")
+    console.log("III) O Modulo da corrente na carga Delta eh 2,42 Arms? \n")
+    
+    console.log('I)')
+    let p3 = parseFloat(readlineSync.question('potencia trifasica: ')) 
+    var rp3 = p3/3
+    console.log(p3 + "/" + 3 + "\n I) VERDADEIRA, p30 = " + rp3 + "\n")
+
+    console.log('III)')
+    let vrms1 = parseFloat(readlineSync.question('vrms: ')) 
+    let fp1 = parseFloat(readlineSync.question('fp: ')) 
+    var moduloCorrente = p3/ (3*vrms1*Math.cos(fp1))
+    console.log('ip = p30/3*vp*cos(fi) ' + '\n III) VERDADEIRA, Ip = ' + moduloCorrente)
+
+    case 2:
+    console.log("Q2) Um motor de indução trifásico pode ser modelado como uma carga conectada em estrela equilibrada")
+    console.log("Determine o FP de um motor de indução de 1KW, 220Vrms e Il = 4Arms")
+    let fp2 = parseFloat(readlineSync.question('FP: '))
+    let vrms2 = parseFloat(readlineSync.question('VRMS: '))
+    let IL2 = parseFloat(readlineSync.question('I linha: '))
+
+    console.log('calculando a pot aparente: ')
+    var s = Math.sqrt*(vrms2)*IL2
+    console.log('S = raizDe3 * Vrms * iL')
+    console.log('S = ' + s)
+
+    console.log('Pot real eh: P = S * COS(fi)')
+    console.log('P = S*Cos(fi) = ' + fp2)
+    console.log('O fator de potencia sera: ')
+    console.log("FP = cos(fi) = P/S = " + (fp2/s))
+
+    case 3:
+    console.log("Q3) Um circuito estrela-estrela equilibrado possui zy=10|_45° e van 220|_0° com seq positiva. ")
+    console.log('Determinar a potencia complexa NA CARGA')
+
+    let van3Modulo = parseFloat(readlineSync.question('vanModulo: '))
+    let van3Defasagem = parseFloat(readlineSync.question('vanDefasagem: '))
+    let zyModulo3 = parseFloat(readlineSync.question('Zymodulo: '))
+    let zyDefasagem3 = parseFloat(readlineSync.question('ZyDefasagem: '))
+    
+    console.log('\n Ia = van/zy')
+    var rmodulo3 = van3Modulo/zyModulo3
+    var rDefasagem3 = van3Defasagem/zyDefasagem3
+    console.log('Ia = ' + rmodulo3 + "|_" + rDefasagem3)
+
+    console.log('A pot complexa monofasica nesta carga eh: ')
+    console.log('sa = vp = ip*')
+    var sResultado3 = (van3Modulo/Math.sqrt(2)) * (zyModulo3/Math.sqrt(2)) 
+    console.log(sResultado3 + "|_" + (-zyDefasagem3))
+
+    console.log('/\ /\ /\ slide multiply this value for 2, but in result in ATIVITY is !=')
+
+    console.log('s30 = 3 * sa')
+    var s30 = 3 * sResultado3
+    console.log(s30)
+
+     
+  }
 }
