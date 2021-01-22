@@ -370,5 +370,54 @@ case '3':
     console.log('V5ohm = ' + results8 + ' * ' + '1/a')
     var resultsFinal = (results6*results4) * (1/a)
     console.log('v5Ohm: ' + resultsFinal + '|_' + (results7+results5) + '°')
+    break;
   }
+
+  case '4':
+    const expr5 = readlineSync.question('Qual ex?' + '\n')
+    switch (expr5)
+    {
+      case '1':
+      console.log('Um motor de indução trifásico de 220 V e 60Hz possui 4 polos. Se o escorregamento deste motor é de 2%')
+      console.log('calcule a velocidade de rotação em rpm e assinale a alternativa correta.') 
+
+      console.log('vel. Sincrona:  ns = 120*f/p')
+      console.log('Escorregamento: s = ns-n/ns')
+      console.log('vel. do rotor: n = ns(1-s)')
+      console.log('freq. da corrente induzida no rotor: f2 = p(ns-n)/120 = sf1')
+      var freq1 = parseFloat(readlineSync.question('freq: '))
+      var numeroDePolos = parseFloat(readlineSync.question('numero de polos: '))
+      var porcentagem = parseFloat(readlineSync.question('Insira a % do escorregamento: '))
+
+      var ns = (120*freq1)/numeroDePolos
+      var n = ns*(1 - (porcentagem/100)) 
+      console.log('n: ' + n + ' rpm')
+      break;
+
+      case '3':
+      console.log('Um MIT de 4 polos e 60 Hz consome 50 kW quando gira a 1700 rpm.')
+      console.log('As perdas no cobre do estator são 2 kW, perdas no núcleo do estator são 2,5 kW')
+      console.log('e as perdas mecânicas são 1,5 kW. Calcule a eficiência deste motor e assinale a alternativa correta.')
+      
+      numeroDePolos = parseFloat(readlineSync.question('numero de polos: '))
+      freq1 = parseFloat(readlineSync.question('freq: '))
+      var pEntrada = parseFloat(readlineSync.question('Potencia de entrada:'))
+      var pc1 = parseFloat(readlineSync.question('Perdas no Cobre, Pc: '))
+      var pcuest = parseFloat(readlineSync.question('Perdas no nucleo do estator, Pcu,est: '))
+      var pmec = parseFloat(readlineSync.question('Perdas mecanicas são, Pmec: '))
+      var n3 = parseFloat(readlineSync.question('n: '))
+
+      var ns = (120*freq1)/numeroDePolos
+      console.log('\nS= ns-n/ns')
+      var s33 = (ns - n3)/ns
+      console.log('Pentrada = ' + pEntrada)
+      console.log('\nPot. mecânica + perdas:')
+      var pmec3 = (1 - s33)*pEntrada
+
+      console.log('\nPot Saida:')
+      console.log('Pmec - PerdasMec: ')
+      var potSaida = pmec3 - pmec
+      var eficiencia = potSaida/pEntrada
+      console.log('Eficiencia de: ' + eficiencia*100 + (' %'))
+    }
 }
