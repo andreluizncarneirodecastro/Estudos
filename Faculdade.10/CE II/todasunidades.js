@@ -220,19 +220,25 @@ switch (expr3)
     
     console.log('\n Ia = van/zy')
     var rmodulo3 = van3Modulo/zyModulo3
-    var rDefasagem3 = van3Defasagem/zyDefasagem3
+    var rDefasagem3 = van3Defasagem - zyDefasagem3
     console.log('Ia = ' + rmodulo3 + "|_" + rDefasagem3)
 
     console.log('A pot complexa monofasica nesta carga eh: ')
     console.log('sa = vp = ip*')
     var sResultado3 = (van3Modulo/Math.sqrt(2)) * (rmodulo3/Math.sqrt(2)) 
-    console.log(sResultado3 + "|_" + (-zyDefasagem3))
+    console.log(sResultado3 + "|_" + (zyDefasagem3))
 
     console.log('/\ /\ /\ slide multiply this value for 2, but in result in ATIVITY is !=')
 
     console.log('s30 = 3 * sa')
+    console.log('\nlike the ANSWER in UN2:')
     var s30 = 3 * sResultado3
-    console.log(s30)
+    console.log('s30= ' + s30 + "|_" + (zyDefasagem3))
+
+    console.log('\nOR LIKE THE SLIDE(AND WE THINKS IT IS THE RIGHT THING)')
+    var sResultado4 = sResultado3*2
+    var s40 = 3 * sResultado4 
+    console.log(s40 + "|_" + (zyDefasagem3))
     break;
   }
 
