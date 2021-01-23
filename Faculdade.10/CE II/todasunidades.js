@@ -420,4 +420,126 @@ case '3':
       var eficiencia = potSaida/pEntrada
       console.log('Eficiencia de: ' + eficiencia*100 + (' %'))
     }
+
+    case '5':
+      const expr6 = readlineSync.question('Qual ex?' + '\n')
+      switch (expr6)
+      {
+        case '1':
+        console.log("Considere um motor de inducao trifasico de 10Hp, 220V, cos(fi) = 0,87 e n = 85%")
+        console.log('Calcule a corrente deste motor')
+        var hp1 =  parseFloat(readlineSync.question('Insira o valor em hp: '))
+        var v133 =  parseFloat(readlineSync.question('Insira o valor de V: '))
+        var x33 = parseFloat(readlineSync.question('Insira o valor do cos de fi: '))
+        var n =  parseFloat(readlineSync.question('Insira o valor de n: '))
+        
+        console.log(n/100)
+        var i6 = (hp1 * 746)/((Math.sqrt(3))*v133*x33*(n/100))
+        console.log('\nI = ' + i6)
+
+        break;
+
+        case '3':
+        console.log('Um motor de inducao trifasico de 4 polos, 60hz e 10 cv possui os seguintes dados da placa:')
+        console.log('Tensao nominal: 220/380 V')
+        console.log('corrente nominal: 25,6/14,8 A')
+        console.log('ip/in = 8,2')
+        console.log('Fs = 1,2 (20%)')
+        console.log('\nDetermine a CORRENTE DE PARTIDA e a CORRENTE MÁXIMA que o motor pode consumir sem ser danificado')
+        console.log('SE este motor for ligado em 220V.')
+        var v11 = parseFloat(readlineSync.question('Insira o valor de V1 em: V1/V2: '))
+        var v11 = parseFloat(readlineSync.question('Insira o valor de V2 em: V1/V2: '))
+        var i11 = parseFloat(readlineSync.question('Insira o valor de I1 em: I1/I2: '))
+        var i22 = parseFloat(readlineSync.question('Insira o valor de I2 em: I1/I2: '))
+        
+        var ipIn =  parseFloat(readlineSync.question('Insira o valor de IP/IN: '))
+        var FS =  parseFloat(readlineSync.question('Insira o valor de fs: '))
+        
+        var ip380 = ipIn*i22
+        var in380 = i22*FS
+
+        console.log('\nIp(380) = ip/in * i2  -->' + ip380)
+        console.log('In(380) = i2 * fs -->' + in380)
+        break;
+      }
+      case '6':
+        const expr7 = readlineSync.question('Qual ex?' + '\n')
+        switch (expr7)
+        {
+          case '1':
+            console.log('Uma máquina C de 4 polos, construída com enrolamento imbricado')
+            console.log(' com 600 condutores ativos gira a 1800 rpm. O fluxo por polo é 40 mWb e armadura foi projetada para suportar uma corrente máxima de 80 A. ')
+            console.log('Calcule a tensão induzida no enrolamento de armadura, torque eletromagnético desenvolvido por esta máquina e, em seguida, assinale a alternativa correta.')
+            var condAtivos = parseFloat(readlineSync.question('Insira o valor de condutores ativos: '))
+            var fluxoPolo = parseFloat(readlineSync.question('Insira o fluxo por Polo: '))
+            var Rpm2 = parseFloat(readlineSync.question('gira a quantos RPM ? '))
+
+            console.log('ea = kfi*wm = zp/z*pi*a * fi * (n/60*2*pi')
+            console.log('ea = Zfi * n / 60')
+
+            var sResults = condAtivos * fluxoPolo * (Rpm2/60)
+            console.log('EA = ' + sResults)
+
+            var IMaximo = parseFloat(readlineSync.question('\nCorrente maxima de ? '))
+            console.log('Pe = Ea * Ia')
+            var PEMax = sResults * IMaximo
+            console.log('Pe = ' + PEMax)
+
+            console.log('Torque eletromag: T = Ea*Ia/Wm')
+            var sTorque = PEMax/( (Rpm2/60) * 2*Math.PI)
+            console.log('Torque = ' + sTorque)
+            break;
+            
+        
+        case '2':
+          console.log('Uma máquina CC de 4 polos, construída com enrolamento ondulado, com 600 condutores ativos gira a 1800 rpm. O fluxo por polo é 40')
+          console.log('mWb e armadura foi projetada para suportar uma corrente máxima de 80 A. Calcule a tensão induzida no enrolamento de armadura, torque')
+          console.log('eletromagnético desenvolvido por esta máquina e, em seguida, assinale a alternativa correta.')
+          console.log('\nEA = P*ZA / 60*A')
+          var P6 = parseFloat(readlineSync.question('Insira o numero de polos: '))
+          var condAtivos22 = parseFloat(readlineSync.question('Insira o numero de condutores ativos: '))
+          var a66 = parseFloat(readlineSync.question('Insira o valor de a: '))
+          var IMax3 = parseFloat(readlineSync.question('Insira o valor de Imax: '))
+          Rpm2 = parseFloat(readlineSync.question('gira a quantos RPM ? '))
+          fluxoPolo = parseFloat(readlineSync.question('Insira o fluxo por Polo: '))
+
+          var Ea = ((P6 * condAtivos22)/(60*a66))*fluxoPolo*Rpm2
+          console.log('\nEa= ' + Ea)
+          var PE6666 = Ea * IMax3
+          console.log('Pe = Ea * Ia')
+          console.log('Pe = ' + PE6666)
+
+          console.log('PM = PE -> Twm = Ea * Ia' )
+          console.log('T = Ea*Ia/Wm')
+          var results10 = PE6666 / ((Rpm2/60) * 2*Math.PI)
+          console.log('T = ' + results10 + 'N.m')
+          break;
+
+          case '3':
+          console.log('Considere um gerador CC em derivação de:')
+          console.log('40 kW, Vt =220 V, Rf=60 e RA=0,06')
+          console.log('Determina as tensoes induzicas na armadura para condicoes nominais.')
+          console.log('\nPlena carga')
+
+          var Pot6 = parseFloat(readlineSync.question('Insira o valor de potencia: '))
+          var Vt = parseFloat(readlineSync.question('Insira o valor de Vt: '))
+          var Rf = parseFloat(readlineSync.question('Insira o valor de Rf: '))
+          var Ra = parseFloat(readlineSync.question('Insira o valor de Ra: '))
+          console.log('Corrente na carga: Il = P/Vt')
+          var IL1 = Pot6/Vt
+          console.log('IL = ' + IL1)
+
+          console.log('Corrente de campo: If = Vt/Rf')
+          var IF1 = Vt/Rf
+          console.log('If = ' + IF1)
+
+          console.log('Corrente na armadura: Ia = If+IL')
+          var IA1 = IF1+IL1
+          console.log('IA = ' + IA1)
+
+          var EA1 = Vt + Ra*IA1
+          console.log('EA = ' + EA1)
+          break;
+          
+        }
 }
