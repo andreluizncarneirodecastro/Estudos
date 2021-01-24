@@ -309,7 +309,7 @@ case '3':
 ////////////////////////////////////
     case '3':
     console.log('Calcule a tensão na resistência de 5 ohms do secundário e assinale a alternativa correta.')
-    console.log('Padrão: van = 100|_0 , r1 = 20, c1 = -5, r2 = 5, c1 = 5')
+    console.log('Padrão: van = 100|_0 , r1 = 20, c1 = -5, r2 = 5, I1 = 5')
     console.log('Nesse consta: Divisor de Tensao..')
 
     vanModulo4 = parseFloat(readlineSync.question('vanModulo: '))
