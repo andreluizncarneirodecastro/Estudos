@@ -58,7 +58,7 @@ switch (expr2)
     console.log(un1 + ' : ' + un2)
     console.log('\nSolução:')
     a = un1/un2
-    console.log('a = ' + -a)
+    console.log('a = ' + a)
     z2Img = (a*a) * (I14)
     z2Real = (a*a) * (R24)
     console.log(a + '² *' + z2Real + '+ j' + z2Img)    
