@@ -548,4 +548,112 @@ case '3':
           break;
           
         }
+        case '7':
+        const expr8 = readlineSync.question('Qual ex?' + '\n')
+        switch (expr8)
+      {
+          case '1':
+          console.log('Um conjunto de 20 lampadas de 100w e 127 cada, deve ser instalado em um circ. com 20m de comprimento')
+          console.log('A menor seção dos cabos isolados com PVC 70°C que podem ser usados nessa instalação deve garantir Q.T de 2% e 3%')
+
+          var nLampadas = parseFloat(readlineSync.question('Insira o numero de lampadas: '))
+          var nPotencia = parseFloat(readlineSync.question('Insira a potencia em Watts: '))
+          var nVoltagem = parseFloat(readlineSync.question('Insira a Voltagem: '))
+          var nComprimento = parseFloat(readlineSync.question('Insira o comprimento do Local: '))
+          var nporcentagem1 = parseFloat(readlineSync.question('Insira a primeira porcentagem: '))
+          var nporcentagem2 = parseFloat(readlineSync.question('Insira a segunda porcentagem: '))
+
+          var nResultado = 2*(1/58)*(1/((nporcentagem1/100)*(nVoltagem*nVoltagem)))*(nLampadas*nPotencia*nComprimento)
+          console.log('Resultado para :' + (nporcentagem1/100) + 'eh de :' + nResultado + 'mm²')
+
+          var nResultado2 = 2*(1/58)*(1/((nporcentagem2/100)*(nVoltagem*nVoltagem)))*(nLampadas*nPotencia*nComprimento)
+          console.log('Resultado para :' + (nporcentagem2/100) + 'eh de :' + nResultado2 + 'mm²')
+          break;
+
+          case '3':
+          console.log('Analise a tabela a seguir que apresenta as cargas de um circuito de iluminação e suas respectivas distâncias até o quadro de distribuição. ')
+          console.log('Carga (W): 200, 600, 800, 500')
+          console.log('d(m): 10, 20, 30, 50')
+          console.log('Determine a menor seção transversal do cabo BT (PVC de 70°C) para alimentar este conjunto de carga de forma que a queda de tensão seja inferior à 3%. ')
+          console.log('Todas as cargas são monofásicas de 127 V e os cabos serão instalados em eletroduto embutido em alvenaria.')
+
+          var ncarga1 = parseFloat(readlineSync.question('Insira a carga 1 em Watts: '))
+          var nComprimento1 = parseFloat(readlineSync.question('Insira o comprimento do 1: '))
+          var ncarga2 = parseFloat(readlineSync.question('Insira a carga 2  em Watts: '))
+          var nComprimento2 = parseFloat(readlineSync.question('Insira o comprimento do 2: '))
+          var ncarga3 = parseFloat(readlineSync.question('Insira a carga 3  em Watts: '))
+          var nComprimento3 = parseFloat(readlineSync.question('Insira o comprimento do 3: '))
+          var ncarga4 = parseFloat(readlineSync.question('Insira a carga 4  em Watts: '))
+          var nComprimento4 = parseFloat(readlineSync.question('Insira o comprimento do 4: '))
+          var nVoltagem2 = parseFloat(readlineSync.question('Insira a Voltagem: '))
+          var nporcentagem1 = parseFloat(readlineSync.question('Insira a porcentagem desejada: '))
+
+
+          var nResultado = 2*(1/58)*(1/((nporcentagem1/100)*(nVoltagem2*nVoltagem2)))*((ncarga1*nComprimento1)+(ncarga2*nComprimento2)+(ncarga3*nComprimento3)+(ncarga4*nComprimento4))
+          console.log('Resultado para :' + (nporcentagem1/100) + 'eh de :' + nResultado + 'mm²')
+          break;
+
+      }
+
+      case '8':
+        const expr9 = readlineSync.question('Qual ex?' + '\n')
+        switch (expr9)
+      {
+        case '1':
+          console.log('Determine a corrente nominal e a máxima suportável (sem sofrer danos) de um motor trifásico de 220 V possui os seguintes dados de placa e assinale a alternativa correta:')
+          console.log('10 cv (4polos) , cos (fi) = 0,8 , n = 80% , fs = 1,25')
+
+          var sCV = parseFloat(readlineSync.question('Insira a quantidade em cv: '))
+          var sV = parseFloat(readlineSync.question('Insira a tensao: '))
+          var cosFi = parseFloat(readlineSync.question('Insira o cos(fi) '))
+          var sN = parseFloat(readlineSync.question('Insira o n: '))
+          var resulst11 = (sCV*736)/((Math.sqrt(3))*sV*cosFi*(sN/100))
+          console.log('iNominal = ' + resulst11)
+          var sFs = parseFloat(readlineSync.question('\nInsira o fs: '))
+          console.log('Imax = inom * FS')
+          var results12 = sFs*resulst11
+          console.log('Imax = ' + results12)
+          break
+
+        case '3':
+        console.log('Um alimentador deve abastecer os seguintes motores trifásicos e suas distâncias em relação ao quadro de distribuicao')
+
+        console.log('elevador social -  – 10 cv (4 polos), cos(fi) = 0,88 , n = 91%, FS = 1,25 e 25m')
+        console.log('elevador de serviço – 7,5 cv (4 polos) , cos(fi)= 0,85 , n = 89%, FS = 1,25 e 25 m;')
+
+    
+        console.log('Todos os motores são de indução trifásicos, com rotor em gaiola e partida direta, tensão 220 volts – 60Hz')
+        console.log('Assuma que os condutores serão de cobre com isolação PVC 70°𝐶 e instalados no método B1 para dimensionar os cabos deste circuito')
+    
+        var nCv = parseFloat(readlineSync.question('Insira o numero de CV: '))
+        var nVolts = parseFloat(readlineSync.question('Insira o numero de V: '))
+        var icosfi1 = parseFloat(readlineSync.question('Insira o cos(fi) 1: '))
+        var iN1 = parseFloat(readlineSync.question('Insira o n1: '))
+        var iFS = parseFloat(readlineSync.question('Insira o FS: '))
+    
+        var iSoc = (nCv*736)/(Math.sqrt(3)*nVolts*icosfi1*(iN1/100))
+        console.log('Isoc: ' + iSoc + ' A')
+    
+        var nCv2 = parseFloat(readlineSync.question('\nInsira o numero de CV: '))
+        var nVolts2 = parseFloat(readlineSync.question('Insira o numero de V: '))
+        var icosfi12 = parseFloat(readlineSync.question('Insira o cos(fi) 1: '))
+        var iN12 = parseFloat(readlineSync.question('Insira o n1: '))
+        var iFS2 = parseFloat(readlineSync.question('Insira o FS: '))
+    
+        var iSoc2 = (nCv2*736)/(Math.sqrt(3)*nVolts2*icosfi12*(iN12/100))
+        console.log('Iserv: ' + iSoc2 + ' A')
+        console.log('\nI Alimentador: ' + ((iSoc*iFS)+(iSoc2*iFS2)))
+
+        console.log('Tabela de ampacidade(b1 com 3 condutores carregados): cabo de 16mm²')
+
+        var iFSFinal = parseFloat(readlineSync.question('\nInsira o FS Final 1: '))
+        var iFSFinal2 = parseFloat(readlineSync.question('Insira o FS Final 2: '))
+ 
+        var sResultado = (Math.sqrt(3)*((iSoc*iFSFinal)+(iSoc2*iFSFinal2)))/(58*nVolts2*0.02)
+        console.log('s = ' + sResultado)
+        console.log('\nSerá usado o cabo de 25 mm² determinado a partir do critério da capacidade de corrente, por ser de maior bitola')
+
+
+      }
+
 }
