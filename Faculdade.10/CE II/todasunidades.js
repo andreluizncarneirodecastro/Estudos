@@ -618,8 +618,8 @@ case '3':
         case '3':
         console.log('Um alimentador deve abastecer os seguintes motores trifásicos e suas distâncias em relação ao quadro de distribuicao')
 
-        console.log('elevador social -  – 10 cv (4 polos), cos(fi) = 0,88 , n = 91%, FS = 1,25 e 25m')
-        console.log('elevador de serviço – 7,5 cv (4 polos) , cos(fi)= 0,85 , n = 89%, FS = 1,25 e 25 m;')
+        console.log('elevador social -  – 10 cv (4 polos), cos(fi) = 0,8 , n = 80%, FS = 1,15 e 25m')
+        console.log('elevador de serviço – 7,5 cv (4 polos) , cos(fi)= 0,82 , n = 85%, FS = 1,25 e 25 m;')
 
     
         console.log('Todos os motores são de indução trifásicos, com rotor em gaiola e partida direta, tensão 220 volts – 60Hz')
