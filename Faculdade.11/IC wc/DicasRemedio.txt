@@ -1,0 +1,54 @@
+introducao:
+meios da noticias,
+como elas influenciam o mundo
+etc
+
+revisao: 
+aprofunda as coisas.
+
+
+Influciador digital cita na introdução
+todo mundo tem voz no meio digital, isso possibilita pessoas que não são jornalistas,
+a darem a suas opniões dos quais expõe dados que não são verdadeiros
+
+
+Trabalhos relacionados: listar os autores que mostram diferentes trabalhos que fazem de forma diferente,
+e que o nosso parte de um novo principio e da uma visão diferente
+
+
+Metodologia explica para o leitor quais as partes a serem abordadas.
+Experimental, de campo etc. Criar a tecnologia e fazer de laguma forma.
+Mostrar o metodo que utilizamos. Vai de 1 ou 2 paginas. 
+ABRE A PORTA, PARA O DEV.
+
+que é a segunda grande parte do trabalho.
+O Que são as paginas web, como é com midia digital apenas iremos analisa-las.
+Como vou analisa-las? 
+Tem uma forma de obter esses dados: web crawler que obtem essas informações.
+por ser um trabalho de graduação e não ter um tempo de dev maior, foi focado em noticias textuais.
+(APESAR DE SEREM SÓ MIDIAS DIGITAIS, SERÃO ANALISADAS SÓ OS TEXTOS, TENDO EM VISTA Q A PARTE VISUAL
+É DE OUTRA AREA)
+
+WebCrawler, fonte, qualidade da fonte, da uma nota pra fonte, da qual indica para o usuário qual a chance dela 
+ser verdadeira ou nao;
+
+Retornar os dados pro usuário as informações...
+
+O q ele falou é que pode-se ter um banco de dados,
+vendo as principais respostas, da qual pode ser adicional.
+
+Fim do dev: retorna se é fake ou nao.
+
+
+Resultado:
+como que o uso da aplicação se relaciona com o objetivo que eu fiz na introdução.
+Ai diga se ele foi satisfatório ou não
+
+Qualidade do funcionamento da ferramenta.
+
+
+Desenvolvimento: subtopicos, revisão: subtopicos. Revisão bibliográfica: subtopicos
+
+Na introdução ja menciona eles.
+
+Revisão bibliográfica: um subtopico curto sobre os influenciadores digitais tendo determinada força para influenciar pessoas.
