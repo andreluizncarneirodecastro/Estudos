@@ -13,7 +13,6 @@ a darem a suas opniões dos quais expõe dados que não são verdadeiros
 Trabalhos relacionados: listar os autores que mostram diferentes trabalhos que fazem de forma diferente,
 e que o nosso parte de um novo principio e da uma visão diferente
 
-
 Metodologia explica para o leitor quais as partes a serem abordadas.
 Experimental, de campo etc. Criar a tecnologia e fazer de laguma forma.
 Mostrar o metodo que utilizamos. Vai de 1 ou 2 paginas. 
@@ -37,7 +36,7 @@ vendo as principais respostas, da qual pode ser adicional.
 
 Fim do dev: retorna se é fake ou nao.
 
-
+------------------------------------------------------------------------------------------------------------------------------------------------
 Resultado:
 como que o uso da aplicação se relaciona com o objetivo que eu fiz na introdução.
 Ai diga se ele foi satisfatório ou não
