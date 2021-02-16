@@ -404,3 +404,4 @@ encaminhamento e arquivamento de notícias, artigos eletrônicos mensagens ou ou
 another links
 https://jornal.usp.br/universidade/grupo-de-divulgacao-cientifica-da-usp-mostra-anatomia-das-fake-news/
 https://medium.com/@thepen0411/web-crawling-tutorial-in-c-48d921ef956a
+
