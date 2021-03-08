@@ -1,0 +1,91 @@
+package ex;
+
+	import java.io.IOException;
+	import java.util.Scanner;
+
+public class Ex {
+
+
+		    public static void main(String[] args) throws IOException {
+			    Scanner ler = new Scanner(System.in);
+		        String[][] m = new String[5][5];
+			    
+		    	boolean continua = true;
+		    	System.out.println("Insira os dados do funcionario na seguinte ordem: ");
+		    	System.out.println("1) Nome ");
+		    	System.out.println("2) Funcao ");
+		    	System.out.println("3) Idade ");
+		    	System.out.println("4) Sexo");
+		    	System.out.println("5) Salario");
+		    	
+		    	for(int i=0; i<5; i++) {
+			    	System.out.println("Dados do funcionario " + (i+1));
+		    		for(int j=0; j<5; j++) {
+				    	m[i][j] = ler.nextLine();
+			    	}	
+		    	}
+		    	
+		    	System.out.println("---TERMINO NA INSERCAO DOS DADOS---" + '\n');
+		    	System.out.println("---Leitura da Matriz e interpretacao dos dados---");
+		    	System.out.println("Nome | Funcao | Idade | Sexo | Salario.");
+		    	
+		    	System.out.printf(m[0][0] + " " + m[0][1] + " " + m[0][2] + " " + m[0][3] + " " + m[0][4] + '\n');
+		    	System.out.printf(m[1][0] + " " + m[1][1] + " " + m[1][2] + " " + m[1][3] + " " + m[1][4] + '\n');
+		    	System.out.printf(m[2][0] + " " + m[2][1] + " " + m[2][2] + " " + m[2][3] + " " + m[2][4] + '\n');
+		    	System.out.printf(m[3][0] + " " + m[3][1] + " " + m[3][2] + " " + m[3][3] + " " + m[3][4] + '\n');
+		    	System.out.printf(m[4][0] + " " + m[4][1] + " " + m[4][2] + " " + m[4][3] + " " + m[4][4] + '\n');
+		    	
+		    	
+		    	//Salarios e Idade
+		    	int sValue = 0;
+		    	int sValue2 = 0;
+		    	int sValue3 = 100;
+		    	String a2 = null;
+		    	String a3 = null;
+		    	for(int i=0; i<5; i++) {
+				    	int a = Integer.parseInt(m[i][2]);
+				    	int b = Integer.parseInt(m[i][4]);
+				    	sValue = b + sValue;
+			    		
+				    	if(a > sValue2) {
+				    		a2 = m[i][0];
+				    		sValue2 = a;
+				    	}
+
+				    	
+				    	if(a < sValue3) {
+				    		a3 = m[i][0];
+				    		sValue3 = a;
+				    	}
+
+				    	
+		    	}
+		    	
+		    	int count = 0;
+		    	int count2 = 0;
+		    	for(int i=0; i<5; i++) 
+		    	{
+			    	if(m[i][3].equals("F")) {
+			    		count++;
+			    	}
+
+			    	else {
+			    		count2++;
+			    	}
+
+		    	}
+		    	System.out.println(".::Dado estatistico da empresa::.");
+		    	System.out.println("A maior idade sera: " + sValue2 + ", do sr(a) " + a2);
+		    	System.out.println("A menor idade sera: " + sValue3 + ", do sr(a) " + a3);
+		    	System.out.println("Sexo Feminino: " + count);
+		    	System.out.println("Sexo Masculino: " + count2);
+		    	System.out.println("Total Salarios de: " + sValue);
+
+		    }
+		   
+}
+
+
+	
+
+

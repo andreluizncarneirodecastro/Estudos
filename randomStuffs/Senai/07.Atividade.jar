@@ -1,0 +1,51 @@
+package ex;
+
+	import java.io.IOException;
+	import java.util.Scanner;
+
+public class Ex {
+
+
+		  public static void main(String[] args) throws IOException {
+		    Scanner ler = new Scanner(System.in);
+	    	double valorInicial;
+	    	double taxa;
+	    	double sAux=0;
+	    	double sAux2 = 0;
+	    	
+	    	boolean continua = true;
+	    	int periodo = 5;
+	    	char decisao = 0;
+	    	
+	    	System.out.println("Insira o valor Inicial com ,");
+	    	valorInicial = ler.nextDouble();
+
+	    	System.out.println("Insira o valor da taxa com ,");
+			taxa = ler.nextDouble();
+			sAux = valorInicial + (valorInicial * taxa);
+	    	while(continua) {
+	    		for(int j=1; j <= periodo; j++) {
+
+    			    System.out.println(" | " + j + " | " + sAux);
+    			    
+    			    sAux = sAux + (sAux * taxa);
+
+    			}
+			    
+			    System.out.println("Deseja simular mais um ano? S/N" );
+			    decisao = (char)System.in.read();
+		    	if(decisao != 'S')
+		    		break;
+		    	
+		    	else
+		    		continue;
+	    		}
+		   
+  			}
+
+  }
+
+
+	
+
+
