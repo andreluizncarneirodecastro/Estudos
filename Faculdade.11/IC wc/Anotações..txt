@@ -1,4 +1,4 @@
-Levantamento do impacto social que as Fake News geram;
+- Levantamento do impacto social que as Fake News geram;
 Implementação de um Web Crawler;
 Sistema que consiga identificar notícias de mesmo assunto;
 Sistema que consiga categorizar as notícias;
