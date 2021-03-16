@@ -3,7 +3,7 @@ Implementação de um Web Crawler;
 Sistema que consiga identificar notícias de mesmo assunto;
 Sistema que consiga categorizar as notícias;
 Sistema que consiga classificar as notícias e;
-Utilização do trabalho em projetos comerciais (principalmente agências de marketing / reportagens).
+Utilização do trabalho em projetos comerciais (principalmente agências de marketing / reportagens)..
 
 De fato, para nós termos resultados muito interessantes, seria ideal aliarmos aprendizado de máquina com análise de linguagem natural.
  No entanto, um trabalho englobando estas duas técnicas levaria bastante tempo e tem alta complexidade (algo digno de um mestrado). 
@@ -220,6 +220,14 @@ para diferenciar melhor as notícias falsas e as reais, com base no representaç
 
 
 [3.2 em diante falta ler]
+
+
+#######################################PONTOS########################################################
+Introducao legal, fala sobre como a fn funciona e como por ser algo muito relativo existem algoritmos que por mais funcionais que sejam, a chance de errar é certa. ~DATASETS~
+Explicação de echo chamber: https://en.wikipedia.org/wiki/Echo_chamber_(media)
+- Pontos de propagacao de fake news, incluindo a satira.
+
+
 --------------------------------------------------------------------------------------------------------------------------
 2.) 
 The rise of social Bots - - Citado por 1082
