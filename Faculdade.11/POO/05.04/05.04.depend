@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1617671967 source:c:\users\andre\desktop\05.04\complexo.cpp
+	"complexo.hpp"
+
+1617671835 source:c:\users\andre\desktop\05.04\main.cpp
+	"complexo.hpp"
+
+1617671947 c:\users\andre\desktop\05.04\complexo.hpp
+	<iostream>
+
+1617672010 source:c:\users\andre\desktop\teste\main.cpp
+	"complexo.hpp"
+
+1617671947 c:\users\andre\desktop\teste\complexo.hpp
+	<iostream>
+
