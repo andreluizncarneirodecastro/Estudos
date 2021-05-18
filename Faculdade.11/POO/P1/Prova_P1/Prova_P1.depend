@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1619488068 source:c:\users\andre\desktop\prova_p1\main.cpp
+	<iostream>
+	"complexo.h"
+	"quaternio.h"
+
+1619482076 c:\users\andre\desktop\prova_p1\complexo.h
+	<iostream>
+
+1619482105 source:c:\users\andre\desktop\prova_p1\complexo.cpp
+	"complexo.h"
+
+1619488383 source:c:\users\andre\desktop\prova_p1\quaternio.cpp
+	"quaternio.h"
+
+1619487975 c:\users\andre\desktop\prova_p1\quaternio.h
+	"complexo.h"
+

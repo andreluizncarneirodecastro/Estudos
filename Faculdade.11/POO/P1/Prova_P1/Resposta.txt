@@ -1,0 +1,7 @@
+a) R: Quaternio é composto de: número real e 3 números imaginários. A classe Quaternio através da herança da classe Complexo herda o número real e o primeiro número imaginário. Os outros dois números imaginários são implementados na própria classe Quaternio. Com a herança não há a necessidade de implementarmos novamente o número real e o primeiro número complexo.
+
+b) Está no código.
+
+c) Está feita a herança no código.
+
+d) Está no código.

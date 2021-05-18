@@ -1,0 +1,101 @@
+4 arquiteturas ( Estilos Arquitetonicos) : camada, objeto, centrada em recursos e baseada em eventos. 4 Sendo utilizadas, tendo as mais praticadas ~camada/objetos~
+Como acontece a comunicação, como que acontece a troca de conteudo entre os componentes.
+
+Facebook é distribuido, se fosse centralizada não daria conta dos dispositivos conectados devido a diversas interações. 
+
+Marketplaces - Americanas/Magazine Luiza - Sites de comercio eletronico que dão a mesma impressão do facebook, que parece que esta tudo em um lugar só,
+porém não daria conta de ter tudo em um lugar só no caso de uma estrutura centralizada, tendo que distribuir tudo isso para dar conta em relação do comercio eletronico
+
+[Arquit. centrada em dados]
+
+
+[Arquit. Obj]
+Arquitetura em OBJ é mais maleavel, porque a de camada, só da pra fazer a comunicação caso esteja na 10, com a 9, pra se comunicar com a 8, com a 7, com a 6... etc
+Na arquitetura de obj, desde que faça a chamada do objeto, da a flexibilidade para comunicar com outros objetos.
+Um exemplo na arquitetura de OBJ, é a de cliente servidor, que se ajusta bem a esse modelo.
+Cada computador/dispositivo se interagem com um servidor/sistema distribuido do qual as interações aconteceram pelos computadores do lado do cliente,
+interagindo com os componentes do lado do servidor. 
+
+[Arquit. Centradas em Recursos]
+Também conhecida como RESTful, temos como característica que os recursos na verdade são gerenciados pelos componentes de forma indualizada,
+eles podem ser a qualquer momento adicionados/removidos/alterados tudo isso de forma remota.
+Então nessa situação, podemos imaginar que os nossos recursos estão espalhados pelo sistema distribuido. Então um recursos solicitado 
+por um componente, é processado e devolvido.
+Tendo como regras:
+1. Ocorre uma nomeação dos componentes e a interação é feita apartir dessa nomeação.
+2. Todos os serviços oferecem a mesma interface, para que a comunicação seja possível, pois cada um oferecendo uma interface diferente
+não conseguiriamos fazer a comunicação com os componentes, baseado nessa arquitetura.
+3. As mensagens enviadas para um serviço ou recebidas no serviço são totalmente auto-contidas(ou seja dentro da mesma estrutura dos componentes)
+4. após a execução de uma operação em um seviço, o componente esquece tudo sobre o chamador. 
+
+-------------------------------------------------------
+
+Exemplo AMAZON
+objetos(arquivos) são colocados em buckets(diretórios)
+buckets não podem ser colocados em buckets. 
+[Objeto - Arquivo]
+[Bucket - Pasta]
+Quando armazenamos um arquivo, temos que dar um identificador de onde vai ser armazenado esse arquivo, até para uma possível recuperação dele.
+O caminho que vamos utilizar para recuperar o arquivo seria: http://[nome da pasta].s3.amazonaws/[nome do arquivo] http://aula.s3.amazonaws.com/exemplo
+
+pra armazenar o objeto vamos: POST aula/exemplo
+para mostrar a lista de arquivos armazenados: GET aula
+pra ver o conteudo de um arquivo: get URI(endereço do conteudo)
+
+A Abordagem da amazon
+conceito da API permite que criamos uma interface, entre a nossa estrutura de aplicação e o usuário, então quando o usuário faz uma solicitação e faz a API,
+"utilizamos o termo consome uma API", que faz uma chamada da API, qeu faz uma solicitação para o servidor, o servidor faz o processamento, que devolve a aplicação no fim.
+
+HOJE QUANDO vamos um site com a ideia de API, o site n faz nenhuma conexão com o bd, tudo q vai devolver a solicitação seria a API.
+Q vai fazer uma chamada através da interface dele, que vai ser executado/processado e devolvido como resultado.
+A aplicação passa a ter dentro dela, somente a interface de camada com o usuario, isso é legal porque podemos utilizar a mesma regra de negocio para plataformas diferentes.
+Podendo usar pro site/sist. desktop/parte mobile
+
+Citou o exemplo do uso de sw de gestores que utilizam a API do correio por exemplo, q com o cep, obtem várias informações. 
+Sendo um conceito de estrutura baseada em camadas e de centralização de API's restful;
+
+A MAIORIA HOJE EM DIA, UTILIZA EM CAMADAS E EM OBJETOS. Porém ainda existem várias aplicações que utilizam a de recursos.
+
+--------------------
+[Arquitetura baseada em eventos]
+
+Trabalha com a propagação de eventos dentro da estrutura do sistema. 
+Os eventos na hora da propagação podem conter os dados ou não, podendo trazer só uma chamada.
+A arquitetura baseada em eventos, conhecemos pelo Publisher/Subscriber. 
+tendo o middleware que é o meio campo entre o sistema e a interface do usuário, assegura que somente os processos assinantes irão receber esses eventos.
+Então quer dizer que o middleware faz uma filtragem de quem deve receber esses eventos, conforma a solicitação.
+Os processos são fracamente acoplados, não tendo uma ligação forte em relação a ligação.
+Quando falamos da propagação dos eventos, falamos de eventos que são disponibilizados, conforme a solicitação dos processos..
+Temos o barramento dos eventos, os componentes, e os processos startadados pelos componentes, iram puiblicar os eventos e publicar para quem solicita-los.
+COMPONENTE PODE PUBLICAR, OU RECEBER UM EVENTO.
+
+Quem trabalha com ela é o : Apache Camel(gerenciador de sistemas - tb sendo sv web), Spring integration ou Mule ESB
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+Arquitetura de sistemas|
+dividida em 3 partes|
+centralizadas, descentralizadas, hibridas.
+
+[CENTRALIZADAS]
+O FOCO DELA, o exemplo principal é o cliente~servidor.
+É centralizada porque temos um servidor e os clientes solicitam o conteudo desse servidor.
+Processo divididos em 2 grupos, lado servidor e o lado do cliente.
+Lado do servidor: processo uqe implementa um serviço especifico
+Lado cliente: procsso que solicita um serviço de um servidor.
+FORMA DE INTERAÇÃO: REQUISIÇÃO-RESPOSTA.
+
+
+
+DESKTOP - Trabalhamos com a linha (C E D)
+no item B temos a interface do usuario e aplicação gerando no cliente. E o BD só no servidor, então percebe-se
+que o servidor é mais um armazem de jogos, um repositorio, do que algo q vai armazenar a aplicação ou algo do tipo,
+e no ultimo exemplo temos a interface do usuario, a aplicação, uma interação com o bd, e uma parte no servidor.
+TODAS AS SITUAÇÕES, fazem parte do modelo servidor, basta saber qual vai distribuir e pra quem.
+É comum ver em varias empresas q a aplicação esta no cliente e o bd no sv.
+
+
+C C C C C C 
+ SERVIDOR
+C C C C C C 
+REPLICAÇÃO ATIVA, redireciona o cliente para o servidor que esta mais disponivel, tendo o balanceamento de carga

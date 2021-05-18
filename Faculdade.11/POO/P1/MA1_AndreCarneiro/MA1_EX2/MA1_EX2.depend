@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1619910372 source:c:\users\andre\desktop\ma1_ex2\main.cpp
+	<iostream>
+	"invoice.h"
+
+1619910308 source:c:\users\andre\desktop\ma1_ex2\invoice.cpp
+	"invoice.h"
+
+1619910309 c:\users\andre\desktop\ma1_ex2\invoice.h
+	<string>
+

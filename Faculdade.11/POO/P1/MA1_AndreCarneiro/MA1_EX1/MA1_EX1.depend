@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1619904135 source:c:\users\andre\desktop\ma1_ex1\animal.cpp
+
+1619904165 source:c:\users\andre\desktop\ma1_ex1\animalorcamento.cpp
+
+1619907230 source:c:\users\andre\desktop\ma1_ex1\main.cpp
+	<iostream>
+	<vector>
+	"vaca.h"
+
+1619907235 source:c:\users\andre\desktop\ma1_ex1\vaca.cpp
+	"vaca.h"
+
+1619907230 c:\users\andre\desktop\ma1_ex1\vaca.h
+	"animalorcamento.h"
+
+1619906353 c:\users\andre\desktop\ma1_ex1\animalorcamento.h
+	"animal.h"
+
+1619904266 c:\users\andre\desktop\ma1_ex1\animal.h
+
