@@ -1,0 +1,50 @@
+1)  Os números referem-se apenas aos anos em que as diferentes normas foram publicadas, trazendo em cada versão a estabilidade para os códigos. 
+As versões posteriores são presumivelmente melhores do que as anteriores tendo novas funcionalidades tanto na linguagem quanto em suas bibliotecas. 
+Muitos dos recursos mais recentes apenas economizam seu tempo de digitação (às vezes ao custo da legibilidade) ou tornam mais fácil evitar erros. 
+Algo que devemos ter um pouco de cuidado é a compatibilidade ABI, do qual se alguma versão quebrar a compatibilidade ABI, não podemos usar uma biblioteca dessa versão nas outras versões.
+
+-> C++ 98 é a primeira versão do ISO C ++. Ele nos permite escrever código portátil e delineia cuidadosamente os limites da portabilidade, permite-nos responsabilizar as implementações não conformes nos responsabilizando por escrever comportamento indefinido. 
+-> C++03 é quase idêntico ao C++ 98 tendo como diferença introduzir classes sem construtores declarados pelo usuário de uma maneira bem definida. 
+-> C++11 teve como principal diferença em relação a versão anterior a adição de referências rvalue e semântica de movimento.
+-> C++14 teve algumas melhorias, mas a estrutura de linguagem se mantém a mesma. Vários novos recursos básicos de linguagem foram introduzidos.
+-> C++17 Foram adicionadas ligações estruturadas, dedução de argumento do modelo do construtor e instruções if constexpr, novos tipos de biblioteca também forma adicionados
+-> C++20 foram adicionados conceitos, o operador de comparação de três vias.
+
+4) Vantagens: uso de toda capacidade da placa de vídeo, como: alto desempenho para cálculos, recursos(shaders) para efeitos gráficos, armazenamento de dados na memória da placa de vídeo (VRAM), acesso imediato a características específicas de hw não definidas
+Desvantagens: difícil implementação, requer bons conhecimentos prévios, dependência de hw, a necessidade de se mexer com funções dependentes de plataforma para ter acesso a tais funcionalidades e impossibilitar de não fornecer funcionalidades de gerenciamento de janelas interação com o usuário ou arquivos E/S.
+
+
+2) | Codigo Comentado |
+
+#include <iostream>
+#include<windows.h> //include da biblioteca do Windows
+#include<mysql.h> // é a biblioteca do cliente API e também o link da lib-mysqlclient
+
+// Especificações da conexão com o banco de dados
+
+const char* hostname = "localhost"; // host
+const char* username = "root"; // user
+const char* password = "123456";//pw do urusario “root”
+const char* database = "aulateste"; //nome da base de dados
+unsigned int port = 3306; // porta de conexão
+const char* unixsocket = NULL;
+unsigned long clientflag = 0;
+
+
+using namespace std;
+
+int main()
+{
+    MYSQL* conn; //instanciação da conexão
+
+    conn = mysql_init(0); //aloca o objeto criado na linha de cima
+
+    conn = mysql_real_connect(conn, hostname, username, password, database, port, unixsocket, clientflag);  // estabelece a conexao com os parâmetros de especificação da conexão do banco
+
+    if(conn){
+        cout<<"Conexao Estabelecida"<<endl;
+    }else{
+        cout<<"Não foi possível realizar a conexão"<<endl;
+    }
+    return 0;
+}
